@@ -1,0 +1,5 @@
+parscale\mixgrm.psl                                  !please enter syntax file                       
+0,2                                                  !the choices on error band(0=normal,2=2SE)
+0,0,1                                                !the choices on intervals(0=default number of intervals,0=unequal width,0=mid point)
+parscale\files.out                                   !please enter output file with path with extension
+      
