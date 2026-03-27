@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="IRTEQ.exe" version="1.0.9.31" publicKeyToken="d6c42daca665cfc9" language="en-US" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="IRTEQ.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="IRTEQ" version="1.0.9.0" publicKeyToken="D6C42DACA665CFC9" language="neutral" processorArchitecture="msil" />
+    <commandLine file="IRTEQ.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IRTEQ.exe" size="481280">
+      <assemblyIdentity name="IRTEQ" version="1.0.9.0" publicKeyToken="D6C42DACA665CFC9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>M4lUr19dohBvjK7bmw3TQhC9zis=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="IRTEQ.ico" size="58270">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zio/l29KgX1h6i8dFbUDF/2g1XI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAKE\Chris" issuerKeyHash="998d8c2e30d2c35a1e4e2f520b680a494d51b542" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>aUUhc4jaRJJ7aBp1Xzh4f6bY4x8=</DigestValue></Reference></SignedInfo><SignatureValue>EyHajKBPER4zt59L7bpYMCBjN4mca04F4FftvepsPm6YOaePG/pt3qpjIv7QFtBrt5HuXyvoxH1F422lIRYs8q6yQo6JhKCq1nZTPu3O91+7cp5H4vXWjLLnuWjBGgWJTS0rD7u7PKt5Bxlj9CUwcZ1dZXcNZKbjllh3NhSttvM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>6XBDNj6wQM6Mb8F9vAbzpaVXBA3vKafOIqfKn4myo4mW6CcUUSzvubb4uvKlb3Hn5k1PjgBJCp6J1mexuNTK+hCrHjHoPb2AZlSt13iqtDrk9+WE+l8IV1BOUuEg2TFLrWvT1oDJZ31Ptniu9IZsb3Syv4k8YYQVE9VN9hx+6Pk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1fe3d8a67f78385f751a687b9244da8873214569" Description="" Url=""><as:assemblyIdentity name="IRTEQ.exe" version="1.0.9.31" publicKeyToken="d6c42daca665cfc9" language="en-US" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAKE\Chris</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>E38jMY3sMj8b6IhVGE2YFfGfNGI=</DigestValue></Reference></SignedInfo><SignatureValue>3Z7JTGwyn1l+hqPj+rLdc2TRt9XRAG+iVO9FJI8DXp7/ra0xmjQoziJnJcNYz2jrM5ETJxwe3uWw7vyXzJaej1uN4scagfh4wfkmYbOymcP5DS1txM3nNyBuX2GUc6lv2Xi+y3smjjlwZmtAS8CJh7bSbit1pHTXgUoRlhJyA5k=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>6XBDNj6wQM6Mb8F9vAbzpaVXBA3vKafOIqfKn4myo4mW6CcUUSzvubb4uvKlb3Hn5k1PjgBJCp6J1mexuNTK+hCrHjHoPb2AZlSt13iqtDrk9+WE+l8IV1BOUuEg2TFLrWvT1oDJZ31Ptniu9IZsb3Syv4k8YYQVE9VN9hx+6Pk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBwTCCASqgAwIBAgIQUwelukV7NpFH6JLhZFBekzANBgkqhkiG9w0BAQUFADAfMR0wGwYDVQQDHhQATABBAEsARQBcAEMAaAByAGkAczAeFw0wNzEwMjMyMDQyNTBaFw0wODEwMjMwMjQyNTBaMB8xHTAbBgNVBAMeFABMAEEASwBFAFwAQwBoAHIAaQBzMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDpcEM2PrBAzoxvwX28BvOlpVcEDe8pp84ip8qfibKjiZboJxRRLO+5tvi68qVvcefmTU+OAEkKnonWZ7G41Mr6EKseMeg9vYBmVK3XeKq0OuT35YT6XwhXUE5S4SDZMUuta9PWgMlnfU+2eK70hmxvdLK/iTxhhBUT1U32HH7o+QIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAEiCgVQsryMyMvYIO4HAhg8f8fSsyl0l2onW5AEp3ZWPgoDzeZoSkM0RnOdWvk46/EimLlw+wpeMPYw1BNuJrEHkKmeRSzevoYUSW0bJv8kRV4Glz7UZ1kcN9KGb5iil0sNkr3Ubxojk+yLuuORaqAooHCNgQvEfGV2aqDDu9IGf</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
