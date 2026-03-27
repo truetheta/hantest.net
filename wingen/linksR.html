@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>WinGen: Windows software that Generates IRT parameters and item responses</title>
+<style type="text/css">
+<!--
+.style4 {color: #FF0000}
+div.MsoListParagraphCxSpFirst {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+div.MsoListParagraphCxSpLast {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+div.MsoListParagraphCxSpMiddle {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+div.MsoNormal {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+div.Section1 {page:Section1;}
+li.MsoListParagraphCxSpFirst {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+li.MsoListParagraphCxSpLast {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+li.MsoListParagraphCxSpMiddle {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+li.MsoNormal {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoListParagraphCxSpFirst {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoListParagraphCxSpLast {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoListParagraphCxSpMiddle {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoNormal {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style8 {font-size: 16px}
+div.MsoNormal1 {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+li.MsoNormal1 {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoNormal1 {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+.style9 {font-family: "Times New Roman", Times, serif}
+.style10 {
+	font-size: 14pt;
+	font-family: "Times New Roman", Times, serif;
+}
+.style13 {color: #0000FF}
+.style14 {color: #000000}
+.style15 {color: #FFFFFF}
+.style16 {font-size: 18pt}
+.style18 {font-family: Calibri, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 id="top"></h1>
+<a name="top"></a>
+<table width="100%" border="0">
+  <tr>
+    <td width="10" rowspan="2"><div align="right"><img src="image/hbar.gif" width="3" height="130" alt="hbar" /></div></td>
+    <td width="634"><img src="image/title2.gif" width="599" height="86" alt="WinGen: Windows software that generates IRT parameters and item responses" /></td>
+  </tr>
+  <tr>
+    <td width="634" height="54">Kyung (Chris) T. Han</td>
+  </tr>
+</table>
+<hr />
+<table width="100%" border="0">
+  <tr>
+    <td width="20%" height="21"><div align="center" class="style9"><a href="homeF.html" target="_parent">Home</a></div></td>
+    <td width="20%" height="21"><div align="center" class="style9"><a href="modelsF.html" target="_parent">IRT Models </a></div></td>
+    <td width="20%" height="21"><div align="center" class="style9"><a href="downloadsF.html" target="_parent">Downloads</a></div></td>
+    <td width="20%" height="21"><div align="center" class="style9"><a href="manualF.html" target="_parent">How to use </a></div></td>
+    <td width="20%" height="21"><div align="center" class="style9"><a href="linksF.html" target="_parent">Links / Contacts </a></div></td>
+  </tr>
+</table>
+<hr />
+<div class="Section1">
+  <a name="links"></a><p class="style9">Related Links:</p>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" class="style9">&nbsp;</td>
+      <td width="48%" class="style9"><p><a href="http://www.umass.edu/remp/software/irteq"><u>IRTEQ</u></a><a href="http://www.umass.edu/remp/software/irteq" class="style13"></a><br />
+          <img src="image/IRTEQ.jpg" alt="IRTEQ:Windows Application that Implements IRT Scaling and Equating" width="210" height="125" longdesc="http://www.umass.edu/remp/software/irteq" /><br />
+      IRTEQ:Windows Application that<br />
+      Implements IRT Scaling and Equating (Han, 2007)</p>
+      </td>
+      <td width="48%" class="style9"><p><a href="http://www.umass.edu/remp/software/hsgen"><u>HSGen</u></a><br />
+          <img src="image/hsgen.jpg" alt="HSGen: Hierarchical Score Generator" width="178" height="102" longdesc="http://www.umass.edu/remp/software/hsgen" /><br />
+      HSGen: Hierarchical Score Generator (Han, 2007)</p>
+        <p><br />
+      </p></td>
+    </tr>
+    <tr>
+      <td width="5%" height="105" class="style9"><p class="style13">&nbsp;</p>      </td>
+      <td width="48%" class="style9"><span class="style13"><a href="http://www.umass.edu/remp"><u>REMP</u></a><br />
+          <span class="style14">Research and Evaluation Methods Program<br />
+University of Massachusetts Amherst</span></span></td>
+      <td width="48%" class="style9"><p><u><a href="http://www.umass.edu"><u>UMass</u></a></u><br />
+      University of Massachusetts Amherst <br />
+      <span class="style15">.</span><br />
+      </p>      </td>
+    </tr>
+    <tr>
+      <td width="5%" height="57" class="style9"><p>&nbsp;</p>      </td>
+      <td width="48%" height="57" class="style9"><br />
+Contact the author:<br />
+<a href="mailto:khan.edu@hotmail.com"><u>khan.edu@hotmail.com</u> </a></td>
+      <td width="48%" class="style9">&nbsp;</td>
+    </tr>
+  </table>
+  <p class="style9">&nbsp;</p>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="68%" class="style9"><form action="http://wwwx.oit.umass.edu/~cfteach/formmail.cgi" method="post" name="form2" class="style8" id="form2">
+           <a name="survey"></a> <p align="center" class="MsoNormal1 style10"><span class="style16">Survey of User Experience with WinGen </span></p>
+            <div align="center" class="style9">
+              <table class="MsoTableGrid" border="2" cellspacing="0" cellpadding="0"
+ style='border-collapse:collapse;border:none'>
+                <tr style='height:119.2pt'>
+                  <td width="638" style='width:6.65in;border:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:119.2pt'><p align="justify" class="MsoNormal1" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;
+                    The purpose of this survey is to understand the users&#8217; experiences with
+                    WinGen. The survey data will be used only for improving WinGen and developing
+                    other IRT-related software. This survey does not collect any personal
+                    information about you. </span></p>
+                      <p align="justify" class="MsoNormal1" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt'>&nbsp;</span></p>
+                    <p align="justify" class="MsoNormal1" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;
+                      Fifteen statements are listed below, and you are asked to indicate the extent
+                      to which you agree or disagree with each statement. There are five possible
+                      responses: Strongly Disagree (SD), Disagree (D), Neutral (N), Agree (A), and
+                      Strongly Agree (SA). Please circle one of the five responses that best
+                      reflects your opinions.</span></p></td>
+                </tr>
+              </table>
+            </div>
+          <p align="center" class="MsoNormal1 style9"><span style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>
+            <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0"
+ style='border-collapse:collapse;border:none'>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>1.
+                  WinGen includes all of the IRT models I would use in my research.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0"
+   style='border-collapse:collapse;border:none'>
+                    <tr>
+                      <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                        <input type="radio" name="Question1" value="1" />
+                      </p>                      </td>
+                      <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                        <input type="radio" name="Question1" value="2" />
+                      </p></td>
+                      <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                        <input type="radio" name="Question1" value="3" />
+                      </p></td>
+                      <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                        <input type="radio" name="Question1" value="4" />
+                      </p></td>
+                      <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                        <input type="radio" name="Question1" value="5" />
+                      </p></td>
+                    </tr>
+                  </table>
+                    <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>2.
+                  The interface of WinGen is easy to use.</span></p>                    </td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0"
+   style='border-collapse:collapse;border:none'>
+                    <tr>
+                      <td height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                              <input type="radio" name="Question2" value="1" />
+                      </p></td>
+                      <td valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                              <input type="radio" name="Question2" value="2" />
+                      </p></td>
+                      <td valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                              <input type="radio" name="Question2" value="3" />
+                      </p></td>
+                      <td valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                              <input type="radio" name="Question2" value="4" />
+                      </p></td>
+                      <td valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                              <input type="radio" name="Question2" value="5" />
+                      </p></td>
+                    </tr>
+                  </table>
+                    <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>3.
+                  It takes relatively long time to learn how to use WinGen, comparing to other
+                  IRT simulation software.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0"
+   style='border-collapse:collapse;border:none'>
+                    <tr>
+                      <td height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                              <input type="radio" name="Question3" value="1" />
+                      </p></td>
+                      <td valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                              <input type="radio" name="Question3" value="2" />
+                      </p></td>
+                      <td valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                              <input type="radio" name="Question3" value="3" />
+                      </p></td>
+                      <td valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                              <input type="radio" name="Question3" value="4" />
+                      </p></td>
+                      <td valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                              <input type="radio" name="Question3" value="5" />
+                      </p></td>
+                    </tr>
+                  </table>
+                    <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>4.
+                  The website for WinGen provides sufficient information about the software.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question4" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question4" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question4" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question4" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question4" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>5.
+                  Other IRT software which I might use with WinGen is not supported well by
+                  WinGen.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question5" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question5" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question5" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question5" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question5" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>6.
+                  The system requirements for WinGen are too challenging for me.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question6" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question6" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question6" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question6" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question6" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>7.
+                  WinGen provides me with error messages that are meaningful.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question7" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question7" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question7" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question7" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question7" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>8.
+                  Input and output files of WinGen are easy to use.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question8" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question8" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question8" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question8" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question8" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>9.
+                  I use WinGen with a syntax file rather than with a point-click way.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question9" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question9" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question9" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question9" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question9" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>10.
+                  WinGen needs to be improved in terms of process time.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question10" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question10" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question10" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question10" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question10" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>11.
+                  The graphical display features of WinGen are helpful.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question11" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question11" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question11" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question11" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question11" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>12.
+                  The manual of WinGen is well documented.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question12" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question12" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question12" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question12" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question12" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>13.
+                  WinGen has many options that are not useful.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question13" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question13" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question13" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question13" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question13" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>14.
+                  WinGen is likely to be used in my future research. </span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question14" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question14" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question14" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question14" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question14" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+              <tr style='height:.6in'>
+                <td width="355" class="style9" style='width:3.7in;padding:0in 5.4pt 0in 5.4pt;height:.6in'><p class="MsoNormal1" style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:13.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:
+  normal'><span style='font-size:12.0pt'>15.
+                  The main interface of WinGen displays too much information.</span></p></td>
+                <td width="282" class="style9" style='width:211.5pt;padding:0in 5.4pt 0in 5.4pt;height:.6in'><table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
+   style='border-collapse:collapse;border:none'>
+                  <tr>
+                    <td width="53" height="39" valign="top" style='width:40.05pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SD<br />
+                            <input type="radio" name="Question15" value="1" />
+                    </p></td>
+                    <td width="53" valign="top" style='width:40.1pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>D<br />
+                            <input type="radio" name="Question15" value="2" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>N<br />
+                            <input type="radio" name="Question15" value="3" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>A<br />
+                            <input type="radio" name="Question15" value="4" />
+                    </p></td>
+                    <td width="54" valign="top" style='width:40.2pt;border:none;padding:0in 5.4pt 0in 5.4pt'><p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:
+    .0001pt;text-align:center;line-height:normal'>SA<br />
+                            <input type="radio" name="Question15" value="5" />
+                    </p></td>
+                  </tr>
+                </table>
+                <p class="MsoNormal1" align="center" style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'></p></td>
+              </tr>
+            </table>
+          <p class="MsoNormal1 style9"><span style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>
+            <p class="MsoNormal1 style9">
+              <label><span class="style8">16. Name of your institution (or the loc<span class="style18">ation of your institution - city/country):
+              
+              <input name="Institution" type="text" id="Institution" size="30" />
+              </span></span></label>
+              </p>
+            <p class="style18">
+              <span class="style8">
+              <label>17. Email Address:
+              <input name="Email" type="text" id="Email" size="35" />
+              </label>
+              </span></p>
+          <p class="style18"> 
+            <span class="style8">
+            <label>
+               <input name="update" type="checkbox" id="update" value="checkbox" />
+               I would like to be informed when </label>
+            </span>
+            <label>updates of WinGen are available</label>
+            </p>
+            <p class="style18">
+              <label>
+                18. Please select your job:
+                <select name="Gender" id="Gender">
+                  <option value="Psychometrician/Scientist">Psychometirician/Scientist</option>
+                  <option value="University faculty">University faculty</option>
+                  <option value="Student">Student</option>
+                </select>
+              </label>
+            </p>
+            <p class="style18">
+              <label></label>
+              19. Suggestions / Comments on WinGen<br />
+              <label>
+                <textarea name="comments" cols="80" rows="8" id="comments"></textarea>
+              </label>
+              <br />
+              <label>
+                <input name="Submit" type="submit" id="Submit" value="Send" />
+              </label>
+              <label>
+                <input name="Reset" type="reset" id="Reset" value="Reset" />
+              </label>
+            </p>
+            <p>
+              <input name="recipient" type="hidden" id="recipient" value="doryhan@gmail.com" />
+              <input name="subject" type="hidden" id="subject" value="WinGen survey" />
+            </p>
+        </form></td>
+    </tr>
+  </table>
+  <p align="center" class="MsoNormal style9" style='text-align:center;line-height:200%'><span class="MsoNormal1" style="text-align:center"><span
+style='font-size:12.0pt;line-height:115%'>Thank
+  you very much for taking your time to complete this survey!</span></span></p>
+  <p class="MsoNormal style9" style='line-height:200%'><span style='font-size:12.0pt; line-height:200%'>&nbsp;</span></p>
+</div>
+<p class="style9"><font size="0.6">Last updated:<span class="style4">
+  <!-- #BeginDate format:Am1 -->January 25, 2009<!-- #EndDate -->
+    </span><br />
+Created by (Chris) Kyung T. Han<br />
+<a href="mailto:doryhan@gmail.com">Contact us</a></font></p>
+<p class="style9">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>WinGen: Windows software that Generates IRT parameters and item responses</title>
+<style type="text/css">
+<!--
+.style3 {
+	font-size: 12px;
+	font-family: "Times New Roman", Times, serif;
+}
+.style4 {color: #FF0000}
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style5 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body>
+<a name="top"></a>
+<table width="100%" border="0">
+  <tr>
+    <td width="10" rowspan="2"><div align="right"><img src="image/hbar.gif" width="3" height="130" alt="hbar" /></div></td>
+    <td width="634"><img src="image/title2.gif" width="599" height="86" alt="WinGen: Windows software that generates IRT parameters and item responses" /></td>
+  </tr>
+  <tr>
+    <td width="634" height="54">Kyung (Chris) T. Han</td>
+  </tr>
+</table>
+<hr />
+<table width="100%" border="0">
+  <tr>
+    <td width="20%" height="21"><div align="center" class="style5"><a href="homeF.html" target="_parent">Home</a></div></td>
+    <td width="20%" height="21"><div align="center" class="style5"><a href="modelsF.html" target="_parent">IRT Models </a></div></td>
+    <td width="20%" height="21"><div align="center" class="style5"><a href="downloadsF.html" target="_parent">Downloads</a></div></td>
+    <td width="20%" height="21"><div align="center" class="style5"><a href="manualF.html" target="_parent">How to use </a></div></td>
+    <td width="20%" height="21"><div align="center" class="style5"><a href="linksF.html" target="_parent">Links / Contacts </a></div></td>
+  </tr>
+</table>
+<hr />
+
+<div align="center">
+  <div align="center"><a name="news"></a></div>
+  <a name="citation"></a><table width="620" border="2" cellspacing="1" cellpadding="10">
+    <tr>
+      <td width="620" height="210" class="style5"><p align="left"><strong><span class="style5" lang="en-US" xml:lang="en-US">Preferred Citation</span></strong></p>
+          <p align="left" class="style5"><span lang="en-US" xml:lang="en-US">Han, K.   T. (2007).   WinGen: Windows software that generates IRT parameters and item responses. <i> Applied   Psychological Measurement, 31</I>(5), 457-459.</span></p>
+
+          <p align="left" class="style5">Han, K. T., &amp; Hambleton, R. K. (2007). User's Manual: WinGen  (<em>Center for Educational Assessment Report No. 642)</em>. &nbsp;Amherst, MA: University  of Massachusetts, School of Education.</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p align="center" class="style5"></p>
+<p align="center" class="style5"></p>
+<p align="center" class="style5">&nbsp;</p>
+<p align="center" class="style5"><a name="wingen"></a><img src="image/wingen2.jpg" alt="WinGen2" width="496" height="303" /></p>
+<p align="center" class="style5" style="margin-bottom: 10.0pt"><span style='font-size:16.0pt;line-height:115%'>About <em>WinGen</em> </span></p><p align="justify" class="MsoNormal1 style5" style='line-height:200%'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item response theory (IRT) is a popular and valuable framework  for modeling educational and psychological test data, due to attractive  properties such as the invariance of item and examinee parameter values (when  IRT models can be found that fit the test data) and item parameters and  examinee parameters being reported on a common scale. However, IRT models often  rely on or are based on two strict assumptions, unidimensionality and the  mathematical form of the item characteristic functions, and violations of these  assumptions can produce serious negative consequences to the measurement  process. One way of evaluating the impact of violating these two critical  assumptions, as well as studying factors such as the impact of choice of  models, examinee sample sizes, the shape of ability distributions, and test  length, and many other factors, is via Monte Carlo  simulation studies. <br />
+  The  essential part of Monte Carlo studies is  simulating examinee item response data given true model parameter values. A  number of computer programs for simulating IRT data have been developed since  the early 1970s. However, most of them were developed in the DOS environment  (e.g., DATAGEN, Hambleton &amp; Rovinelli, 1973, GENIRV, Baker, 1989, and  RESGEN, Muraki, 1992). As a result, these programs are limited today because of  inherent problems in DOS: (1) slow performance speed (16-bit), (2) limited  usable system resources, (3) incompatibility with recent 32-bit Windows-based OSs, and (4) not a  user-friendly interface. Some recent computer simulation programs, such as  WINIRT (Fang &amp; Johanson, 2005) and PARDSIM (Yoes, 1997), were developed for  Windows-based OSs,  but they provide only a few options for generating data from IRT models.  Therefore, the primary goal of this project was to develop computer software  that could simulate IRT data using many IRT models and with many important  options to facilitate the design and implementation of computer simulation  studies in the field of psychometric methods.<br />
+  A  computer program, called WinGen (Han, 2006) was developed to generate  dichotomous and polytomous item response data for several IRT models and for  many conditions that arise in practice. &nbsp;WinGen  has the following useful features:<br />
+  <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.&nbsp;&nbsp; WinGen supports various IRT models.</em> <br />
+  There  are several kinds of unidimensional and multidimensional IRT models that are  widely used today:&nbsp; (1) dichotomous IRT  models with one, two, and three parameters, (2) non-parametric models, (3) polytomous  IRT models such as the partial credit model, generalized partial credit model,  graded response model, rating scale model, and nominal response model, and, (4)  multidimensional compensatory models. WinGen supports these IRT models and  allows users to have a mixture of more than one IRT model in a set of items  (for example, data for the first 10 items might be generated from the  two-parameter logistic model, the next 30 items might be generated from the  three-parameter logistic model, and with the last 10 items, data might be  generated by the graded response model).&nbsp;  Such a data set might be useful when simulating state test data, for  example.<br />
+  <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.&nbsp;&nbsp; WinGen generates IRT model parameter values  from various distributions for realistic data.</em><br />
+  WinGen  can generate sets of item parameters and sets of examinee ability parameters to  essentially create realistic item response data from various kinds of  distributions. Most programs that simulate IRT data only support normal and/or  uniform distributions. Although uniform and normal distributions may be  theoretically ideal or easy to understand, these distributions are not likely  to be the only distributions seen in the real world or of interest to  researchers. With WinGen a user can choose a normal, uniform, or beta distribution  (which can be defined to allow for the generation of skewed distributions,  skewed from highly positive to highly negative) for the examinee parameter in a  model, and a normal, uniform, beta, or lognormal distribution for item  parameters so that the user can conduct a research study with more realistic  IRT data sets, or even unrealistic parameters, if that is the interest of the  researcher.. WinGen provides a graphic function of plotting a histogram of  examinee ability parameters so that a user can make sure the distribution of  the generated parameters is what he/she wanted. This graphing feature is  especially helpful when the goal is to produce skewed distributions.&nbsp; Also, WinGen gives a user substantial control  over item and examinee parameters by allowing a user to enter user specified  parameter sets and/or to set SEED values for generating model parameters.&nbsp; <br />
+  <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.  &nbsp; WinGen provides an intuitive and  user-friendly interface.</em><br />
+  By taking advantage of  running on a Windows platform, WinGen provides a virtually point-and-click  solution for simulating IRT data. There are three stages for simulating data:&nbsp; (1) generating or reading in ability  parameter values, (2) generating or reading in item parameter values, and (3)  simulating item response data. All three stages are shown on a one-stop  interface screen, so a user can reduce the number of possible mistakes by being  able to check the simulated data at each stage. Also, the intuitive interface  of WinGen would be helpful for teaching IRT to those who are not familiar with  the theory. Once item parameters and/or ability parameters are generated,  WinGen immediately provides IRT plots such as item characteristic curves (ICC),  test characteristic curves (TCC), item information curves (IFC), and test  information curves (TIC) so that a user can make sure the generated parameters  fit his/her research purposes. See Figure 1.1 for an example of the interface.
+<p class="MsoNormal1" align="justify" style='margin-bottom:10.0pt;text-align:left;
+line-height:115%'><span style='font-size:12.0pt;line-height:115%;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;'>Figure 1.1<i> WinGen provides an intuitive and
+  user-friendly interface.<br />
+  </i><img width="632" height="436" id="Picture 0" src="home_files/image001.gif"
+alt="interface1.gif" /><br clear="all" style='page-break-before:always' />
+</span>
+<p class="MsoNormal1" align="justify" style='margin-bottom:10.0pt;text-align:center;
+line-height:115%'><span style='font-size:12.0pt;line-height:115%;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;'><img width="519" height="481" id="Picture 1"
+src="home_files/image002.gif" alt="interface2.gif" /></span></p>
+<p class="MsoNormal1" align="justify" style='margin-bottom:10.0pt;text-align:center;
+line-height:115%'><span style='font-size:12.0pt;line-height:115%;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;'><img width="394" height="291" id="Picture 3"
+src="home_files/image003.gif" alt="plot.gif" /></span><span style='font-size:12.0pt;
+line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'><br />
+      <br />
+</span></p>
+<p align="justify" class="MsoNormal1 style5" style='line-height:200%'><em>4.&nbsp;&nbsp; WinGen  is based on the most recent computer environment.</em><br />
+  WinGen was developed on <em>Microsoft .NET frameworks 2.0</em>, the most recent computer software  development environment. The program can run on either 32bit Windows series  (ex., Windows XP) or 64bit Windows series (ex., Windows vista) and is optimized  to use system resources efficiently so that the program can handle a bigger  data in a shorter time. This software can also easily be converted to web-based  software.<br />
+  <em>5. &nbsp; WinGen  provides a powerful research tool.</em><br />
+Several  powerful tools are provided for various research purposes in WinGen.  Replication data can be simulated up to 1,000,000 sets, and syntax files for  other IRT programs, such as PARSCALE (Muraki &amp; Bock, 2003), BILOG-MG  (Zimowski, Muraki, Mislevy, &amp; Bock, 2003), and MULTILOG (Thissen, 2003),  are automatically generated (of course, a user can specify the syntax of the  software by reading in a sample syntax file). Batch files can also be generated  for handling multiple calibrations in a cue. WinGen provides a dialog input to  introduce differential item functioning (DIF) or item parameter drift in the  simulated data. With multiple file read-in option in WinGen, a user can have  multiple groups of examinees and multiple sets of items/tests. WinGen can also  read-in output files (parameter estimates) from other IRT programs and  automatically analyze DIF by computing RMSD, MAD, and BIAS. Table 1.1 summarizes  the features of WinGen and several other simulation software available. </p>
+<p align="center"><strong>Educational Importance</strong><br /></p>
+<p align="justify" class="MsoNormal1 style5" style='line-height:200%'>
+  <span class="MsoNormal1 style5" style="line-height:200%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Although  many IRT model simulation software programs have been developed, most of them  were designed for intentionally narrow purposes since they were not publicly  shared programs. WinGen is more general and more user friendly than many of the  IRT simulation programs available today.&nbsp;  WinGen is easy to use with an intuitive, user-friendly interface while  providing very strong research tools and performance at the same time. Thus,  WinGen should be useful for researchers who want to do simulation research, and  students who are eager to learn more about IRT.&nbsp; </p>
+<p align="justify" class="MsoNormal1" style='line-height:200%'>&nbsp;</p>
+<p align="justify" class="MsoNormal1"><span style='font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Table
+  1.1. <i>Comparison of IRT simulation programs.</i></span></p>
+<div align="justify">
+  <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%"
+ style='width:100%;border-collapse:collapse'>
+    <tr style='height:4.4pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;border-top:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.4pt'><p class="MsoNormal1" align="center" style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></b></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;border:none;border-top:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.4pt'><p class="MsoNormal1" align="center" style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>DATAGEN</span></b></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;border:none;border-top:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.4pt'><p class="MsoNormal1" align="center" style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>GENIRV</span></b></p></td>
+      <td width="13%" nowrap="nowrap" style='width:15.52%;border:none;border-top:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.4pt'><p class="MsoNormal1" align="center" style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>RESGEN</span></b></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;border:none;border-top:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.4pt'><p class="MsoNormal1" align="center" style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>WINIRT</span></b></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;border:none;border-top:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.4pt'><p class="MsoNormal1" align="center" style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>PARDSIM</span></b></p></td>
+      <td width="18%" nowrap="nowrap" style='width:18.68%;border:none;border-top:solid windowtext 1.0pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:4.4pt'><p class="MsoNormal1" align="center" style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>WinGen2</span></b></p></td>
+    </tr>
+    <tr style='height:3.55pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:3.55pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Authors</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:3.55pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Hambleton &amp; <br />
+      </span><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Rovinelli(1973)</span></p>      </td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:3.55pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Baker(1989)</span></p></td>
+      <td width="13%" nowrap="nowrap" style='width:15.52%;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:3.55pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Muraki(1992)</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:3.55pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Fang &amp;</span><br />
+        <span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Johanson(2005)</span></p>      </td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:3.55pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Yoes(1997)</span></p></td>
+      <td width="18%" nowrap="nowrap" style='width:18.68%;border:none;border-top:solid windowtext 1.0pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:3.55pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Han (2007)</span></p></td>
+    </tr>
+    <tr style='height:3.5pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Examinees</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>4,000</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>4,000</span></p></td>
+      <td width="13%" nowrap="nowrap" style='width:15.52%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1,000 (default)</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>4,000</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>N/A</span></p></td>
+      <td width="18%" nowrap="nowrap" style='width:18.68%;border:none;border-top:solid windowtext 1.0pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>100,000,000*</span></p></td>
+    </tr>
+    <tr style='height:3.5pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Items</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>400</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>100</span></p></td>
+      <td width="13%" nowrap="nowrap" style='width:15.52%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>100 (default)</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>400</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>N/A</span></p></td>
+      <td width="18%" nowrap="nowrap" style='width:18.68%;border:none;border-top:solid windowtext 1.0pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>100,000,000*</span></p></td>
+    </tr>
+    <tr style='height:3.5pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>OS</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>DOS</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>DOS</span></p></td>
+      <td width="13%" nowrap="nowrap" style='width:15.52%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>DOS</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Windows</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Windows</span><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>(16,32bit)</span></p>      </td>
+      <td width="18%" nowrap="nowrap" style='width:18.68%;border:none;border-top:solid windowtext 1.0pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Windows(32,64bit)</span></p></td>
+    </tr>
+    <tr style='height:3.5pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>IRT Models</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.16%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Dichotomous</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.42%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Dichotomous</span></p></td>
+      <td width="13%" nowrap="nowrap" valign="top" style='width:15.52%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Dichotomous</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.14%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Dichotomous</span></p></td>
+      <td width="14%" nowrap="nowrap" rowspan="3" valign="top" style='width:13.08%;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Dichotomous</span></p></td>
+      <td width="18%" nowrap="nowrap" valign="top" style='width:18.68%;border:none;border-top:
+  solid windowtext 1.0pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Dichotomous</span></p></td>
+    </tr>
+    <tr style='height:4.0pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.16%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.42%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Polytomous</span></p></td>
+      <td width="13%" nowrap="nowrap" valign="top" style='width:15.52%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Polytomous</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.14%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="18%" nowrap="nowrap" valign="top" style='width:18.68%;background:#E6E6E6;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Polytomous</span></p></td>
+    </tr>
+    <tr style='height:4.0pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.16%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.42%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="13%" nowrap="nowrap" valign="top" style='width:15.52%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>3.Multidimensional</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.14%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="18%" nowrap="nowrap" valign="top" style='width:18.68%;border:none;border-bottom:
+  solid windowtext 1.0pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>3.Nonparametric<br />
+      </span><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>4.Multidimensional</span></p></td>
+    </tr>
+    <tr style='height:3.5pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Distribution</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.16%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Uniform</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.42%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Uniform</span></p></td>
+      <td width="13%" nowrap="nowrap" valign="top" style='width:15.52%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Uniform</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.14%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Uniform</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.08%;border:none;padding:
+  0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Uniform</span></p></td>
+      <td width="18%" nowrap="nowrap" valign="top" style='width:18.68%;border:none;background:
+  #E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Uniform</span></p></td>
+    </tr>
+    <tr style='height:4.0pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.16%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Normal</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.42%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Normal</span></p></td>
+      <td width="13%" nowrap="nowrap" valign="top" style='width:15.52%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Normal</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.14%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Normal</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.08%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Normal</span></p></td>
+      <td width="18%" nowrap="nowrap" valign="top" style='width:18.68%;background:#E6E6E6;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Normal</span></p></td>
+    </tr>
+    <tr style='height:4.0pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.16%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.42%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="13%" nowrap="nowrap" valign="top" style='width:15.52%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>3.Lognormal</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.14%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.08%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="18%" nowrap="nowrap" valign="top" style='width:18.68%;background:#E6E6E6;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>3.Lognormal</span></p></td>
+    </tr>
+    <tr style='height:4.0pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.16%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.42%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="13%" nowrap="nowrap" valign="top" style='width:15.52%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>4.Gamma</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:14.14%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" valign="top" style='width:13.08%;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="18%" nowrap="nowrap" valign="top" style='width:18.68%;border:none;border-bottom:
+  solid windowtext 1.0pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>4.Two-Parameter
+        Beta</span></p></td>
+    </tr>
+    <tr style='height:3.5pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Options</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Replicating</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="13%" nowrap="nowrap" rowspan="4" valign="top" style='width:15.52%;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:3.5pt'><p class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Replicating</span><br />
+              <span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Multiple
+                Blocks,</span><br />
+                          <span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>subtests,
+                            groups</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="18%" nowrap="nowrap" rowspan="4" valign="top" style='width:18.68%;border:none;
+  border-bottom:solid windowtext 1.0pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:3.5pt'><p class="MsoNormal1" align="left" style='text-align:left'><span style='font-size:
+  8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>1.Replicating</span><br />
+              <span style='font-size:
+  8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>2.Introducing DIF/Drift<br />
+                3.Communicating with<br />
+              </span><span style='font-size:
+  8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'> other IRT software<br />
+              </span><span style='font-size:
+  8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>4.Analyzing outputs</span> <span style='font-size:
+  8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>of <br />
+                other IRT software<br />
+                5. Plotting ICF, TCC,<br />
+                IIF, TIF,
+                and histogram<br />
+                of thetas<br />
+                6. Multiple tests, groups.</span></p></td>
+    </tr>
+    <tr style='height:4.0pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;padding:0in 5.4pt 0in 5.4pt;
+  height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+    </tr>
+    <tr style='height:12.75pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;padding:0in 5.4pt 0in 5.4pt;
+  height:12.75pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;padding:0in 5.4pt 0in 5.4pt;
+  height:12.75pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;padding:0in 5.4pt 0in 5.4pt;
+  height:12.75pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;padding:0in 5.4pt 0in 5.4pt;
+  height:12.75pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;padding:0in 5.4pt 0in 5.4pt;
+  height:12.75pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+    </tr>
+    <tr style='height:4.0pt'>
+      <td width="10%" nowrap="nowrap" style='width:10.98%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.16%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.42%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:14.14%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+      <td width="14%" nowrap="nowrap" style='width:13.08%;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:4.0pt'><p class="MsoNormal1" align="center" style='text-align:center'><span
+  style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>&nbsp;</span></p></td>
+    </tr>
+  </table>
+</div>
+<p align="justify" class="MsoNormal1"><span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>*
+  the maximum number of examinees and items could be more or less than
+  100,000,000; it mainly depends on the available&nbsp; system resources of the
+  computer on which WinGen runs. </span><br />
+  <span style='font-size:8.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;'>Note:&nbsp;
+partially adopted from Harwell, Stone, Hsu, and Kirisci (1996, p.117)</span></p>
+<p>&nbsp;</p>
+<p align="center" class="style5">References</p>
+<p class="style5">Baker, F. B.  (1989). <em>GENIRV: A program to generate  item response vectors </em>(Unpublished manuscript).&nbsp; Madison, WI:&nbsp;  University of Wisconsin, Laboratory of Experimental Design.</p>
+<p class="style5">Fang, H., &amp; Johanson, G. (2005, April). W<em>INIRT: A  Windows-based item response theory data generator with an equating and  differential item functioning simulation guide</em>. Paper presented at the  meeting of the American Educational Research Association, Montreal, Canada.</p>
+<p class="style5">Hambleton, R. K., &amp; Rovinelli, R.&nbsp; (1973).<em> A  Fortran IV program for generating examinee response data from logistic test  models.&nbsp; <u>Behavioral Science</u>, 17,  73-74.&nbsp; (Revised, September 1990)</em></p>
+<p class="style5">Hambleton, R. K., Swaminathan, H., &amp; Rogers, H. J. (1991). <em>Fundamentals  of Item Response Theory.</em> Newbury Park, CA: Sage. </p>
+<p class="style5"><span lang="en-US" xml:lang="en-US">Han, K.   T. (2007). WinGen2:   Windows software that generates IRT parameters and item responses [computer   program]. Amherst, MA: University of   Massachusetts Amherst, Center for Educational Assessment. Retrieved May 13,   2007, from </span><a href="http://people.umass.edu/kha/wingen/"><span lang="en-US" xml:lang="en-US">http://www.umass.edu/remp/software/wingen/</span></a></p>
+<p class="style5">Harwell, M. R.,  Stone, C. A., Hsu, T.-C., &amp; Kirisci, L. (1996). Monte Carlo studies in item  response theory. <em>Applied Psychological  Measurement, 20</em>(2)<em>, </em>101-125.</p>
+<p class="style5">Microsoft.  (2002).&nbsp; <em>Microsoft Windows XP</em> [computer program]. Redmond, WA: Author.</p>
+<p class="style5">Microsoft.  (2005).&nbsp; <em>Microsoft .NET framework version 2.0</em> [computer program]. Redmond,  WA: Author.</p>
+<p class="style5">Muraki, E.  (1992). <em>RESGEN: Item response generator</em> [computer program]. Princeton, NJ: Educational Testing Service.</p>
+<p class="style5">Muraki, E.,  &amp; Bock, R. D. (2003). <em>PARSCALE 4: IRT  item analysis and test scoring for rating-scale data </em>[computer program].  Chicago, IL: Scientific Software.</p>
+<p class="style5">Thissen, D.  (2003). <em>MULTILOG</em> 7: <em>Multiple categorical item analysis and test  scoring using item response theory </em>[computer program]. Chicago, IL:  Scientific Software.</p>
+<p class="style5">Yoes,  M. (1997). <em>PARDSIM</em> [computer  program]. St. Paul, MN: Assessment Systems Corporation.</p>
+<p class="style5">van  der Linden, W. J., &amp; Hambleton, R. K., eds. (1997). <em>Handbook of Modern Item Response Theory.</em> New York: Springer-Verlag.</p>
+<p class="style5">Zimowski,  M. F., Muraki, E., Mislevy, R. J., &amp; Bock, R. D. (2003). <em>BILOG-MG 3</em> [computer program]. Chicago,  IL: Scientific Software.</p>
+<p align="left" class="style5">&nbsp;</p>
+<p align="center" class="style5">Acknowlegment</p>
+<p align="justify" class="style5">  The author is very grateful to Professors Ronald K.  Hambleton and Craig S. Wells for important ideas and helpful comments, which strengthened  the foundation of WinGen and expanded the number of options. The author would  also like to thank the Applied Psychological Measurement Inc. for their  generous supports (Grants for Graduate Students in Psychological and  Educational Measurement Programs) on this project with WinGen. </p>
+<p class="style5">&nbsp;</p>
+<p class="style5"><font size="0.6">Last updated:<span class="style4">
+  <!-- #BeginDate format:Am1 -->
+  Sep 18, 2014
+  <!-- #EndDate -->
+  </span><br />
+  Created by Kyung (Chris)  T. Han<br />
+</font></p>
+</body>
+</html>

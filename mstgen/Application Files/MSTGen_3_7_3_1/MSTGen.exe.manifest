@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MSTGen.exe" version="3.7.3.1" publicKeyToken="9401a90ba88eec20" language="en-US" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="MSTGen.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MSTGen" version="3.7.3.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MSTGen.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Extreme.Numerics.dll" size="4137984">
+      <assemblyIdentity name="Extreme.Numerics" version="8.1.5.0" publicKeyToken="9E513770F58567B2" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Xy9kpkOwO5c2lsbksct9xvfIhRAsuOisbfJk9HGSCrE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MSTGen.exe" size="638568">
+      <assemblyIdentity name="MSTGen" version="3.7.3.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2Yzw8YgnhMCEi1DEGH2NsVpQKuHq6fbOB0tMz/GUvk0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\MSTGen.resources.dll" size="42496">
+      <assemblyIdentity name="MSTGen.resources" version="3.7.3.0" language="en-US" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>wOWy7Qm1em15zY1gsFI9nSVwFxxS7uOjZg6aR1ZuDsM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.ValueTuple.dll" size="25232">
+      <assemblyIdentity name="System.ValueTuple" version="4.0.3.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6QXRAlhbIsbfBPIZr1y9v6e8Fll56XiLYt9tzBZeEPQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MSTGen.exe.config" size="1365">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2taXh7FWnN4PthH3NSehGgBk8IKbWfJZF5pSsftINus=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MSTGen.ico" size="10746">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gARXi2VDepIyN20YLkSBnkJYSSX2Qw+s27ZOHNvWjHw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MSTGen150px.jpg" size="181271">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KUCLUMw7YQuqEgQ3x2p1cOo/BSKgEJP0OH+iKwE7yk0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\arrow2.gif" size="332">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sC1QuMCbej/Zfh8Bb8n5gCyR9OrG0n3jpnkGfqnwAWk=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=[Vm~], E=truetheta@gmail.com, C=US" issuerKeyHash="eebcad7f0aa9b1f83767ed039871119fec8a6d24" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>QxHk2EB5tGjfMELKpjuavnDe97M=</DigestValue></Reference></SignedInfo><SignatureValue>LkED+IH9KattWinh28UtQ0X2FzME3uGV009SR1cqJrhswJ2bpcwh5H3d8o0te6eYwBMxSWCP4fpNAK+zkhp8rX11QtEdK027P+ctvt6q3+JZunJ0DOZ/9uilDyQ5s2rbz+6m2dzlFswwpj+2oTkbHGXDB72Upo3shvpiHlLxRnA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>yRtbMKtbqA059IM5SOolWQP/AqIIFvHSTk1g9GJwp4PY76CfKaG4+++YFxKIawqY06IlAoWBeJJ33xXbPMX7qdMERHCuJnDaB1CMbtqnyufsw0SQGNAM+QJJ8z6lF8QLwV2JrLoNbQO4BfGFqIZ9jU8S5VQUCMzCfs64CL0D67E=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="b3f7de70be9a3ba6ca4230df68b47940d8e41143" Description="" Url=""><as:assemblyIdentity name="MSTGen.exe" version="3.7.3.1" publicKeyToken="9401a90ba88eec20" language="en-US" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=[Vm~], E=truetheta@gmail.com, C=US</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>wVwl/Eofh/nfnOE/t2REC6VZ+XA=</DigestValue></Reference></SignedInfo><SignatureValue>jemYBPNZWl2VJPyVXFHp7AigL68VIBbJFdWVSYrenTtCC7OGELq0XWiLr7tiTcYt+vFVkpK98CMn7uV7YSLc51CChNG6Pifp8gZ0Rw5oAuyhn2pJPPYzjjz+wLdQF3zVhzQQhLGx3INotK9zFJ3TRXkQRq2a7z6MDHtQan2swq0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>yRtbMKtbqA059IM5SOolWQP/AqIIFvHSTk1g9GJwp4PY76CfKaG4+++YFxKIawqY06IlAoWBeJJ33xXbPMX7qdMERHCuJnDaB1CMbtqnyufsw0SQGNAM+QJJ8z6lF8QLwV2JrLoNbQO4BfGFqIZ9jU8S5VQUCMzCfs64CL0D67E=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIChjCCAfOgAwIBAgIQk88KhcsPgaxGp8u+C6JqjTAJBgUrDgMCHQUAMEYxCzAJBgNVBAYTAlVTMSIwIAYJKoZIhvcNAQkBFhN0cnVldGhldGFAZ21haWwuY29tMRMwEQYDVQQDHgoAWwBWAG0AfgBdMCAXDTEyMDEwMTA0MDAwMFoYDzIwNTAxMjMxMDQwMDAwWjBGMQswCQYDVQQGEwJVUzEiMCAGCSqGSIb3DQEJARYTdHJ1ZXRoZXRhQGdtYWlsLmNvbTETMBEGA1UEAx4KAFsAVgBtAH4AXTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAyRtbMKtbqA059IM5SOolWQP/AqIIFvHSTk1g9GJwp4PY76CfKaG4+++YFxKIawqY06IlAoWBeJJ33xXbPMX7qdMERHCuJnDaB1CMbtqnyufsw0SQGNAM+QJJ8z6lF8QLwV2JrLoNbQO4BfGFqIZ9jU8S5VQUCMzCfs64CL0D67ECAwEAAaN7MHkwdwYDVR0BBHAwboAQ6ruCWAVcXCsMlf1Om+UTPqFIMEYxCzAJBgNVBAYTAlVTMSIwIAYJKoZIhvcNAQkBFhN0cnVldGhldGFAZ21haWwuY29tMRMwEQYDVQQDHgoAWwBWAG0AfgBdghCTzwqFyw+BrEany74LomqNMAkGBSsOAwIdBQADgYEAmWQtjp8SWA6ZO4Z1RVGctnGV9mujKrtbXVvm+whwomSD9b/+SWkWjrxmEWC70+aPdFtYQ0F+zAyvh4fYuOtexPrj4lVAhMSnfeSq0DM94yeD77ygeqY3LlcAMoNQvE7y5uO+gkg1aSo0XNl8QSV328fa148lmzcNw0s8CwRbt9Y=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

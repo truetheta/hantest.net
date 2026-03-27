@@ -1,0 +1,1828 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>WinGen: Windows software that Generates IRT parameters and item responses</title>
+<style type="text/css">
+<!--
+.style4 {color: #FF0000}
+div.MsoListParagraphCxSpFirst {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+div.MsoListParagraphCxSpLast {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+div.MsoListParagraphCxSpMiddle {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+div.MsoNormal {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+div.Section1 {page:Section1;}
+li.MsoListParagraphCxSpFirst {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+li.MsoListParagraphCxSpLast {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+li.MsoListParagraphCxSpMiddle {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+li.MsoNormal {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoListParagraphCxSpFirst {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoListParagraphCxSpLast {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoListParagraphCxSpMiddle {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoNormal {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+div.MsoNormal1 {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+li.MsoNormal1 {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+p.MsoNormal1 {margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"??","serif";
+	color:black;}
+.style6 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 id="top"></h1>
+<table width="100%" border="0">
+  <tr>
+    <td width="10" rowspan="2"><div align="right"><img src="image/hbar.gif" width="3" height="130" alt="hbar" /></div></td>
+    <td width="634"><img src="image/title2.gif" width="599" height="86" alt="WinGen: Windows software that generates IRT parameters and item responses" /></td>
+  </tr>
+  <tr>
+    <td width="634" height="54">Kyung (Chris) T. Han</td>
+  </tr>
+</table>
+<hr />
+<table width="100%" border="0">
+  <tr>
+    <td width="20%" height="21"><div align="center" class="style6"><a href="homeF.html" target="_parent">Home</a></div></td>
+    <td width="20%" height="21"><div align="center" class="style6"><a href="modelsF.html" target="_parent">IRT Models </a></div></td>
+    <td width="20%" height="21"><div align="center" class="style6"><a href="downloadsF.html" target="_parent">Downloads</a></div></td>
+    <td width="20%" height="21"><div align="center" class="style6"><a href="manualF.html" target="_parent">How to use </a></div></td>
+    <td width="20%" height="21"><div align="center" class="style6"><a href="linksF.html" target="_parent">Links / Contacts </a></div></td>
+  </tr>
+</table>
+<hr />
+<div class="Section1">
+<a name="start"></a>
+<p class=MsoNormal align=center style='text-align:center;line-height:200%'><span
+style='font-size:16.0pt;line-height:200%;font-family:"Times New Roman","serif"'>Quick
+Start</span></p>
+<a name="gexaminee"></a>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>Generating Examinee Data (Step 1)</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'><img width=623
+height=506 id="Picture 1" src="manual_files/image001.jpg" alt=step1></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9312;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Specify the number of examinees</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9313;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Select type of score distribution </span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9314;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Specify mean and standard
+deviation for a normal score distribution</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>      or, specify minimum and
+maximum value for a uniform score distribution</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>or,
+specify a and b parameters for a beta score distribution </span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9315;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Click on a green
+&#8216;Generate&#8217; button</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9316;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Generated examinee theta scores
+should be shown in the box. The data set can be saved at &#8216;File &gt; Save &gt;
+Examinee Data&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9317;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Distribution of examinee thetas
+can be shown by clicking on the &#8216;Histogram&#8217; button.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>An example of generating examinee data where 50,000
+examinees were drawn from a beta distribution (a=2, b=4) is shown in Figure
+3.1.  The use of beta distributions makes it easy to simulate skewed score
+distributions.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Figure
+3.1 <i>Example of Generating Examinee Data</i></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=679 height=412 id="Picture 2" src="manual_files/image002.gif"
+alt="example_step1"></span></p>
+
+<p style="font-size:12.0pt;line-height:150%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+color:black">&nbsp;</p>
+<p style="font-size:12.0pt;line-height:150%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+color:black"><br clear=all style='page-break-before:always'>
+</p>
+<a name="gitem"></a>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>Generating Item Data (Step 2)</span></b></p>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'>&nbsp;</p>
+<p align="center" class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><span class="MsoNormal" style="margin-left:5.25pt;line-height:150%"><span class="MsoNormal" style="margin-left:5.25pt;line-height:150%"><span class="MsoNormal" style="margin-left:5.25pt;line-height:150%"><img
+width=568 height=460 id="Picture 3" src="manual_files/image003.gif" alt=step2 /></span></span></span></span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9312;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Specify the number of items</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9313;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Specify the number of response
+categories. Select &#8216;2&#8217; for dichotomous response data.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9314;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Select an IRT model</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9315;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Select distribution of item parameters
+and specify properties of the distributions</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9316;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Click on a red
+&#8216;Generate&#8217; button</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9317;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Generated item parameter data
+should be shown in the box. The data set can be saved at &#8216;File -&gt; Save
+-&gt; Item Parameter Data&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9318;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Item Characteristic Curves (ICCs),
+Test Characteristic Curve (TCC), Item Information Function Curves (IIF), and
+Test Information Function Curve (TIF) are provided by clicking on the &#8216;IRT
+Plots&#8217; button</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9319;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Mark the check box, &#8216;Add to
+the previous item set&#8217;, and repeat steps (</span><span style='font-size:
+12.0pt;line-height:150%;font-family:Gulim'>&#9312;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+to </span><span style='font-size:12.0pt;line-height:150%;font-family:Gulim'>&#9318;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>)
+if another set of items (or items of different IRT models) needs to be added to
+a previous set of items. This option is particularly useful when a mixed format
+test form is to be simulated.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>An example of generating item data, where 15
+dichotomous items based on 3PLM and 5 polytomous items based on GRM (5 categories)
+are generated, is shown in Figure 3.2.</span></p>
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in;
+line-height:150%'>&nbsp;</p>
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Figure
+3.2 <i>Example of Generating Item Data</i></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=626 height=644 id="Picture 4" src="manual_files/image004.gif"
+alt="example_step2"></span></p>
+
+<p style="font-size:12.0pt;line-height:150%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+color:black">&nbsp;</p>
+<p style="font-size:12.0pt;line-height:150%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+color:black"><br clear=all style='page-break-before:always'>
+
+
+</p>
+<a name="gresponse"></a>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>Generating Item Response Data (Step 3)</span></b></p>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'>&nbsp;</p>
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=595 height=482 id="Picture 5" src="manual_files/image005.gif" alt=step3></span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9312;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Make sure examinee data generated
+in Step1 or a data set is opened with the pull-down menu, &#8216;File &gt; Open
+&gt; Examinee Data&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9313;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Make sure item parameter data
+generated in Step2 or a data set is opened with the pull-down menu, &#8216;File
+&gt; Open &gt; Item Parameter Data&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9314;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Specify the name of the response
+data file by clicking on &#8216;Browse&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9315;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Check the check box and specify
+the number of replications if replication data are desired</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9316;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Adjust options at &#8216;Tools
+-&gt; Options&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9317;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Click on the blue &#8216;Generate
+Response Data Set(s)&#8217; button. The data set should be seen by opening up
+the file with the extension of &#8216;.wgr&#8217;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>An example of generating item data, where 15
+dichotomous items based on the 3PLM and 5 polytomous items based on the GRM (5
+categories) are generated, is shown in Figure 3.3.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Figure
+3.3 <i>Example of Simulating Response Data</i></span><span style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>    </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=624 height=508 id="Picture 6" src="manual_files/image006.gif"
+alt="example_step3 copy"></span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif";
+color:black'><br clear=all style='page-break-before:always'>
+</span>
+<a name="options"></a>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Options</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=360 height=465 id="Picture 7" src="manual_files/image007.gif"
+alt=options></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9312;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+&#8216;Scale to normal metric (scaling factor, D=1.7)&#8217; (default: unchecked).
+By checking this option, WinGen generates item response data on the same scale as
+the normal-ogive model.  Even when the normal ogive model though is of little
+interest, it is common to report scores on the &#8220;normal metric.&#8221;
+This is less true when the polytomous response models are used. </span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9313;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+&#8216;Specify SEED values for generating data&#8217; (default: unchecked). If
+it is unchecked, WinGen will set SEED values according to a system clock.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9314;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+If Option &#9313; is checked, three SEED values have to be specified for
+examinee data, item parameter data, and item response data, respectively.
+Specifying SEED values enables users to have control over generating random
+numbers.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9315;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+ &#8216;Display only the first 5,000 examinees in the main page&#8217;
+(default: checked). WinGen displays only first 5,000 examinees in the main page
+if this option is checked. Undisplayed examinees are still in the memory and
+will be used for plotting a histogram and for simulating response data. All
+examinees can be displayed by unchecking this option, but it may significantly
+slow down the processing time.  </span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9316;
+</span><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#8216;Generate
+input files for estimating program&#8217; (default: checked). This option
+allows WinGen automatically generating syntax files for estimating software,
+such as PALSCALE, Bilog-MG, and MULTILOG.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9317;
+</span><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>If
+Option &#9315; is checked, an estimating program has to be selected. Automated
+syntaxes for PARSCALE and for Bilog-MG are written to estimate parameters based
+on the 3PLM, and automated syntaxes for MULTILOG are written to estimate
+parameters based on the 2PLM.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9318;
+</span><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#8216;Read
+in a sample input file&#8217; (default: unchecked). If it is checked, users can
+import a sample syntax file for an estimating program and make WinGen generate
+automated syntax based on the sample file imported. It must be noted that there
+should be one statement/command per line in a sample file.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9319;
+</span><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>If
+Option &#9317; is checked, a sample input file for an estimating program has to
+be specified. The sample input file specified should be for the estimating
+program chosen at Option &#9316;.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9320;
+</span><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#8216;Generate
+a batch file&#8217; (default: checked). If it is checked, WinGen automatically
+generates a batch file by which users or WinGen can run estimating programs by
+one cue.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9321;
+</span><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#8216;Automatically
+run a batch process&#8217; (default: unchecked). If it is checked, WinGen will
+automatically run a batch file to run estimating programs after simulating data.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9322;
+</span><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#8216;Analyze
+item parameter estimates&#8217; (default: unchecked). If it is checked, WinGen
+will import item parameter estimates from the estimating program chosen above
+and calculate the correlation, RMSE(RMSD), MAD, and BIAS. The statistics
+computed are stored in &#8216;*.wgz&#8217; files.</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-12.0pt;line-height:
+150%'><span lang=KO style='font-size:12.0pt;line-height:150%;font-family:Gulim'>&#9323;
+</span><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#8216;Analyze
+trait (theta) estimates&#8217; (default: unchecked). If it is checked, WinGen
+will import examinee score estimates from the estimating program chosen above
+and calculate the correlation, RMSE(RMSD), MAD, and BIAS. The statistics
+computed are stored in &#8216;*.wgz&#8217; files.</span></p>
+
+<p style="font-size:12.0pt;line-height:150%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+color:black">&nbsp;</p>
+<p style="font-size:12.0pt;line-height:150%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+color:black">&nbsp;</p>
+<a name="files"></a>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'><span style='font-size:16.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>WinGen Files</span></p>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'>&nbsp;</p>
+<a name="ext"></a>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>File Extensions</span></b></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>          WinGen
+uses and produces several kinds of input and output files. Unique extensions
+are assigned on files according to their purposes. The files associated with
+WinGen are summarized in Table 4.1.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Table 4.1 <i>Extensions
+of WinGen Files</i></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:26.7pt'>
+  <td width=89 style='width:66.8pt;border:solid black 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt;height:26.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Extension</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:solid black 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:26.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Description</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border-top:solid black 1.0pt;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:none;padding:0in 5.4pt 0in 5.4pt;
+  height:26.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Type</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.wgc</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+  cue file for executing sets of syntax files</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Input
+  only</span></p>
+  </td>
+ </tr>
+  <tr>
+   <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+   padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+   style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.wgd</span></p>
+   </td>
+   <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+   padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+   style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+   descriptive statistics for simulated data (examinee, item)</span></p>
+   </td>
+   <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+   style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Output only</span></p>
+   </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.wge</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+  data file for Examinees</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Input
+  and Output</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.wgi</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+  data file for Item Parameters</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Input
+  and Output</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.wgr</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+  data file for Generated Responses</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Output
+  only</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.wgs</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+  syntax file</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Input
+  only</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.wgz</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+  analysis summary file</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Output
+  only</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.blm</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Bilog-MG
+  syntax file</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Input
+  and Output</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.psl</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>PALSCALE
+  syntax file</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Input
+  and Output</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.mlg</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>MULTILOG
+  syntax file</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Input
+  and Output</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.par</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Item
+  parameter data file for Bilog-MG, PALSCALE, or MULTILOG</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Output
+  only</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=89 style='width:66.8pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>*.sco</span></p>
+  </td>
+  <td width=424 style='width:317.85pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Examinee
+  score data file for Bilog-MG, PALSCALE, or MULTILOG</span></p>
+  </td>
+  <td width=126 style='width:94.15pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Output
+  only</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;text-indent:9.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+<a name="formats"></a>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+File Formats</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            All input
+and output files of WinGen are ASC text file format, which can be opened and
+edited by Notepad, TextPad, MS Excel, SPSS, SAS, so on.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>(a) WinGen Examinee
+data file (*.wge) &#8211; &#8216;tab-delimited&#8217;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Format: [ID][theta&#8217;s]</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'><img width=492
+height=366 id="Picture 8" src="manual_files/image008.gif" alt="format_wge"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>(b) WinGen Item
+parameter data file (*.wgi) &#8211; &#8216;tab-delimited&#8217;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Format: [Item#][Model][#
+of categories][a-parameters][b-parameters][c-parameters]</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'><img width=585
+height=357 id="Picture 9" src="manual_files/image009.gif" alt="format_wgi"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Models: 1PLM, 2PLM,
+3PLM, NON, GRM, PCM, GPCM, NRM, RSM, and/or MC3PLM</span></p>
+
+<p class=MsoNormal style='text-indent:.5in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>1PLM:
+One Parameter Logistic Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            2PLM: Two
+Parameter Logistic Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            3PLM: Three
+Parameter Logistic Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            GRM: Graded
+Response Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            PCM:
+Partial Credit Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            GPCM:
+General Partial Credit Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            NRM:
+Nominal Response Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            RSM: Rating
+Scale Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            MC3PLM:
+Multidimensional Compensatory Three Parameter Logistic Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            NON: Non-Parametric
+Model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>NOTE</span></u><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>:
+When the non-parametric model is used, another format should be used as
+following:</span></p>
+
+<p class=MsoNormal style='text-indent:.5in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>[Item#][&#8216;NON&#8217;][#
+of evaluation points between -3.0 and 3.0 on the theta scale][list of
+probabilities for each evaluation point]</span></p>
+
+<p class=MsoNormal style='margin-left:80.0pt;text-indent:9.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>(c) WinGen item
+Response data file (*.wgr) &#8211; &#8216;space-delimited&#8217;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Format: [Examinee ID][2
+spaces][Response string]</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'><img width=586
+height=393 id="Picture 10" src="manual_files/image010.gif" alt="format_wgr"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'>&nbsp;</p>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'>&nbsp;</p>
+<a name="naming"></a>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Naming
+  Rules for Simulated Response Data Files</span></b></p>
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            When a user
+generates more than one replication of the data and/or generates DIF/IPD data,
+WinGen automatically modifies the response data file name to organize a set of
+response data files generated. The naming rules WinGen uses are summarized in
+Table 4.2.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Table 4.2 <i>Naming
+Rules for Response Data Files</i></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=313 style='width:234.9pt;border:solid black 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Modified
+  File Name</span></p>
+  </td>
+  <td width=325 style='width:243.9pt;border-top:solid black 1.0pt;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Explanation</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=313 valign=top style='width:234.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>filename</span></i></p>
+  </td>
+  <td width=325 valign=top style='width:243.9pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>a single data set</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=313 valign=top style='width:234.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>filename_</span></i><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>1,
+  <i>filename_</i>2, &#8230;, <i>filename</i>_<i>n</i></span></p>
+  </td>
+  <td width=325 valign=top style='width:243.9pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>n</span></i><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+  sets of replicated data</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=313 valign=top style='width:234.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>filename</span></i><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>_r</span></p>
+  </td>
+  <td width=325 valign=top style='width:243.9pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>a single data set for
+  a reference group in DIF/IPD study</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=313 valign=top style='width:234.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>filename</span></i><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>_f</span></p>
+  </td>
+  <td width=325 valign=top style='width:243.9pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>a single data set for
+  a focal group in DIF/IPD</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=313 valign=top style='width:234.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>filename</span></i><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>_r_1,
+  <i>filename</i>_r_2, &#8230;,<i> filename</i>_r_<i>n</i></span></p>
+  </td>
+  <td width=325 valign=top style='width:243.9pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>n</span></i><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+  sets of replicated data for a reference group in DIF/IPD study</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=313 valign=top style='width:234.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>filename_</span></i><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>f1_1,
+  <i>filename_</i>f1_2,<i> filename_</i>f2_1, <i>filename_</i>f2_2, &#8230;, <i>filename_</i>f<i>m_n</i></span></p>
+  </td>
+  <td width=325 valign=top style='width:243.9pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><i><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Times New Roman","serif"'>n </span></i><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>sets
+  of replicated data for <i>m</i>-th focal group</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=638 colspan=2 valign=top style='width:6.65in;border:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%'><span style='font-family:"Times New Roman","serif"'>*
+   the file extension for response data files, &#8216;*.wgr&#8217;, is skipped
+  in the table</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p style="font-size:12.0pt;line-height:150%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+color:black"><br clear=all style='page-break-before:always'>
+</p>
+<a name="advanced"></a>
+<p class=MsoNormal align=center style='margin-left:5.25pt;text-align:center;
+line-height:150%'><span style='font-size:16.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'> Advanced Uses of WinGen</span></p>
+<a name="dif"></a>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Generating
+Response Data with DIF / IPD</span></b></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;text-indent:30.75pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>There
+are two ways for generating response data with DIF/IPD: (a) direct input mode,
+and (b) multiple file read-in mode. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>(a) Direct Input Mode</span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>          <img
+width=567 height=460 id="Picture 11" src="manual_files/image011.jpg" alt=difd1></span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span lang=KO
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>          </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=566 height=459 id="Picture 12" src="manual_files/image012.jpg" alt=difd></span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><u><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>NOTE:
+Direct Input Mode supports only the 1PLM, 2PLM, and 3PLM. In order to introduce
+DIF/IPD on the items with other models, Multiple File Input Mode should be used</span></u><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9312;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Make sure examinee data generated
+in Step1 or a data set is opened at &#8216;File&gt;Open&gt;Examinee Data&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9313;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Make sure item parameter data
+generated in Step2 or a data set is opened at </span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>    &#8216;File&gt;Open&gt;Item
+Parameter Data&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>    Then, select items that are to
+be with DIF/IPD</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9314;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Click on &#8216;DIF/IPD&#8217; tab</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9315;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> The items selected at &#9314;
+should be shown in the box. Select an item to introduce DIF/IPD on the item</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9316;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+The original parameters of the item selected should be in the first column.
+Specify either item parameter with DIF/IPD in the second column or the amount
+of DIF/IPD in the third column</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9317;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on &#8216;Update&#8217; button. The amount of DIF/IPD should be reflected
+In the box of &#9314;. Go on the process of &#9314;, &#9315;, and &#9316; for
+all the items to which you want to introduce DIF/IPD</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9318;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on &#8216;Main&#8217; tab</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9319;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Specify the name of response data file by clicking on &#8216;Browse&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9320;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Check the check box and specify the number of replications if replicated
+studies are desired</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9321;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Adjust Options at &#8216;Tools&gt;Options&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9322;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on the blue &#8216;Generate Response Data Set(s)&#8217; button. The data
+set should be seen by opening up the file with the extension of
+&#8216;.wgr&#8217;</span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>(b)
+Multiple File Read-in Mode</span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>          <img
+width=567 height=460 id="Picture 13" src="manual_files/image013.jpg" alt=diff1></span></p>
+
+<p class=MsoNormal style='margin-left:5.25pt;line-height:150%'><span lang=KO
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>          </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=566 height=459 id="Picture 14" src="manual_files/image014.jpg" alt=diff></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9312;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on &#8216;DIF/PD&#8217; tab</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9313;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on the radio button in the bottom (&#8216;Introduce DIF/IPD via Multiple
+File Read-in Mode)</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9314;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on &#8216;Browse&#8217; button and specify an examinee data file for a
+reference group</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9315;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on &#8216;Browse&#8217; button and specify an item parameter data file
+for a reference group</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9316;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on &#8216;Browser&#8217; button and specify an examinee data file for all
+focal groups</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>      Or,
+specify examinee data files exactly as many as the number of focal groups</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9317;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Specify item parameter data files exactly as many as the number of focal groups</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9318;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on &#8216;Main&#8217; tab</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9319;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Specify the name of response data file by clicking on &#8216;Browse&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9320;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Check the box and specify the number of replications if replicated studies are desired</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9321;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Adjust Options at &#8216;Tools &gt; Options&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&#9322;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Click on the blue &#8216;Generate Response Data Set(s)&#8217; button. The data
+set should be seen by opening up the file with the extension of &#8216;.wgr&#8217;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'>&nbsp;</p>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'>&nbsp;</p>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'>&nbsp;</p>
+<a name="multi"></a>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Generating
+  Multidimensional Item Response Data</span></b></p>
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'><img width=623
+height=506 id="Picture 15" src="manual_files/image015.gif" alt=mirt></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=450 height=281 id="Picture 16" src="manual_files/image016.gif"
+alt="mirt_theta"></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9312;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Specify the number of examinees</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9313;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Select type of score distribution </span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9314;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Specify mean and standard
+deviation for the normal distribution</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>      or, specify minimum and
+maximum value for a uniform distribution</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>      </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>or,
+specify a and b parameters for a beta distribution </span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9315;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Click on the checkbox,
+&#8216;Multidimensional&#8217;. A Dialog box will pop up.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9316;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Select the number of dimensions
+(up to 5)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9317;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> Select type of distribution and
+specify the characteristics of the distribution for each dimension. Dimensions
+2 to 5 can be set to be correlated with the dimension 1 by selecting </span><span
+style='font-size:12.0pt;line-height:150%;font-family:Gulim'>&#8216;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Correlated</span><span
+style='font-size:12.0pt;line-height:150%;font-family:Gulim'>&#8217;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>.
+Click on </span><span style='font-size:12.0pt;line-height:150%;font-family:
+Gulim'>&#8216;</span><span style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman","serif"'>OK</span><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#8217;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> button.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:Gulim'>&#9319;</span><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'> </span><span style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Specify the
+number of items. The number of response categories is automatically set to &#8216;2&#8217;
+since in this version of WinGen only dichotomous response data can be simulated.
+The model is automatically set to &#8216;MC3PLM&#8217;. </span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9320;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Select distribution of item parameters and specify properties of the
+distributions</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9321; </span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Click
+on the red &#8216;Generate&#8217; button</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&#9322;</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>
+Specify the name of the response data file by clicking on &#8216;Browse&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in;line-height:150%'><span lang=KO style='font-size:12.0pt;
+line-height:150%;font-family:Gulim'>&#9323;</span><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'> Click on the blue
+&#8216;Generate Response Data Set(s)&#8217; button. The data set can be seen by
+opening up the file with the extension of &#8216;.wgr&#8217;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'>&nbsp;</p>
+<p class=MsoNormal align=left style='margin-left:38.0pt;text-align:left;
+text-indent:-.25in;line-height:150%'>&nbsp;</p>
+<a name="syntax"></a>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Using
+Syntax Files and Cue Files</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>            A user can
+use a syntax file to run WinGen instead of point-and-click on the graphic
+interface. Syntax files for WinGen can be composited using any kind of text editor
+software such as &#8216;Notepad&#8217; or &#8216;TextPad&#8217;.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Table 5.1 <i>Commands /
+Options Used in the WinGen Syntax File</i>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:35.95pt'>
+  <td width=199 style='width:149.4pt;border:solid black 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt;height:35.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line /
+  Description</span></p>
+  </td>
+  <td width=439 style='width:329.4pt;border-top:solid black 1.0pt;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:none;padding:0in 5.4pt 0in 5.4pt;
+  height:35.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Commends /
+  Options</span></p>
+  </td>
+ </tr>
+ <tr style='height:35.95pt'>
+  <td width=199 rowspan=4 valign=top style='width:149.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:35.95pt'>
+  <p class=MsoNormal><u><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line1.
+  </span></u></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Examinee
+  Data</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Characteristics</span></p>
+  <p class=MsoNormal><i><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></i></p>
+  <p class=MsoNormal><i><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></i></p>
+  <p class=MsoNormal><i><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></i></p>
+  <p class=MsoNormal><i><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></i></p>
+  <p class=MsoNormal><i><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></i></p>
+  <p class=MsoNormal><span style='font-family:"Times New Roman","serif"'>*
+  &#8216;skip&#8217; option lets WinGen skip generating examinees&#8217; data,
+  and WinGen will use examinees&#8217; data which currently is loaded in the
+  examinees&#8217; theta box for simulating the response data.</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:35.95pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[<i>#
+  of examinees</i>],</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[<i>type
+  of distribution</i>]<i>,</i>[<i>mean/min/a</i>]<i>,</i>[<i>SD/max/b</i>]<i>,</i>[&#8216;replicate&#8217;<i>
+  or nothing</i>]</span></p>
+  </td>
+ </tr>
+ <tr style='height:3.5pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:3.5pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;skip&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:20.2pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:20.2pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[<i>&#8216;file&#8217;</i>]<i>,</i>[<i>full
+  filename of the examinee data (*.wge) including the path (the name of the
+  folder)</i>]</span></p>
+  </td>
+ </tr>
+ <tr style='height:65.6pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:65.6pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;MIRT&#8217;]<i>,</i>[<i>#
+  of examinees</i>]<i>,</i>[<i># of dimensions</i>]<i>,</i>[&#8216;replicate&#8217;<i>
+  or nothing</i>]</span></p>
+  <p class=MsoNormal style='margin-left:8.1pt'><span style='font-size:12.0pt;
+  font-family:"Times New Roman","serif"'>Followed by</span></p>
+  <p class=MsoNormal style='margin-left:8.1pt'><span style='font-size:12.0pt;
+  font-family:"Times New Roman","serif"'>[<i>distribution for the first dim.</i>]<i>,</i>[<i>mean/min/a</i>]<i>,</i>[<i>SD/max/b</i>]</span></p>
+  <p class=MsoNormal style='margin-left:8.1pt'><span style='font-size:12.0pt;
+  font-family:"Times New Roman","serif"'>[<i>distribution for the second dim.</i>]<i>,</i>[<i>mean/min/a</i>]<i>,</i>[<i>SD/max/b</i>]</span></p>
+  <p class=MsoNormal style='margin-left:8.1pt'><i><span style='font-size:12.0pt;
+  font-family:"Times New Roman","serif"'>         &#8230;&#8230;</span></i></p>
+  </td>
+ </tr>
+ <tr style='height:33.7pt'>
+  <td width=199 rowspan=3 valign=top style='width:149.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:33.7pt'>
+  <p class=MsoNormal><u><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line2.</span></u></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Item
+  Data Characteristics</span></p>
+  <p class=MsoNormal style='text-indent:9.0pt'><span style='font-size:12.0pt;
+  font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-family:"Times New Roman","serif"'>* &#8216;skip&#8217;
+  option lets WinGen skip generating item parameters, and WinGen will use item
+  parameter data which currently is loaded in the item parameter box for
+  simulating the response data.</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:33.7pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[<i>#
+  of items</i>]<i>,</i>[<i># of response categories</i>]<i>,</i>[<i>model</i>]<i>,</i>[<i>distribution
+  for item parameter</i>]<i>,</i>[<i>mean/min/a</i>]<i>,</i>[<i>SD/max/b</i>]<i>,&#8230;.</i></span></p>
+  </td>
+ </tr>
+ <tr style='height:18.4pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:18.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;skip&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:41.5pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:41.5pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;file&#8217;],[<i>full
+  filename of the item data (*.wgi) including path the (the name of the folder)</i>]</span></p>
+  </td>
+ </tr>
+ <tr style='height:29.2pt'>
+  <td width=199 valign=top style='width:149.4pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:29.2pt'>
+  <p class=MsoNormal><u><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line3.</span></u></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Name
+  of Response Data File</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:29.2pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[<i>full
+  name of the response data (*.wgr) including the path where the simulated
+  response data will be saved</i>]</span></p>
+  </td>
+ </tr>
+ <tr style='height:20.65pt'>
+  <td width=199 rowspan=2 valign=top style='width:149.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:20.65pt'>
+  <p class=MsoNormal><u><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line4.
+  </span></u></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Replication</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:20.65pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8217;replication&#8217;]<i>,</i>[<i>#
+  of replications if you chose </i>&#8216;replication&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:20.6pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:20.6pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;1&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.75pt'>
+  <td width=199 rowspan=2 valign=top style='width:149.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.75pt'>
+  <p class=MsoNormal><u><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line5.
+  </span></u></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Scale
+  (Normal or Logistic)</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.75pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8217;logistic&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.75pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.75pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;normal&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:20.65pt'>
+  <td width=199 rowspan=2 valign=top style='width:149.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:20.65pt'>
+  <p class=MsoNormal><u><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line6.
+  </span></u></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Seed
+  Value</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:20.65pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8217;random&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:20.6pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:20.6pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[<i>SEED
+  for examinees</i>]<i>,</i>[<i>SEED for items</i>]<i>,</i>[<i>SEED for
+  responses</i>]</span></p>
+  </td>
+ </tr>
+ <tr style='height:11.2pt'>
+  <td width=199 rowspan=3 valign=top style='width:149.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:11.2pt'>
+  <p class=MsoNormal><u><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line7.
+  </span></u></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Programs
+  for</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Estimating
+  Parameters</span></p>
+  <p class=MsoNormal style='text-indent:9.0pt'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-family:"Times New Roman","serif"'>*
+  &#8217;auto&#8217; option can be used only for dichotomous response data
+  sets. </span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:11.2pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8217;none&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.8pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:14.8pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;Bilog-MG&#8217;
+  or &#8216;Parscale&#8217; or &#8216;Multilog&#8217;],[&#8216;auto&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.95pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:17.95pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;Bilog-MG&#8217;
+  or &#8216;Parscale&#8217; or &#8216;Multilog&#8217;],[<i>full filename
+  including the path of the sample syntax file for the program</i>]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.05pt'>
+  <td width=199 rowspan=5 valign=top style='width:149.4pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+  <p class=MsoNormal><u><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Line8.
+  </span></u></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>A
+  Batch to Run Programs for Estimating Parameters</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-family:"Times New Roman","serif"'>* the
+  option &#8216;batch&#8217;, &#8216;run&#8217;, &#8216;item&#8217;, and
+  &#8216;score&#8217; trigger the options of </span><span style='font-family:
+  "Times New Roman","serif"'>&#9319;</span><span style='font-family:"Times New Roman","serif"'>,
+  </span><span style='font-family:"Times New Roman","serif"'>&#9320;</span><span
+  style='font-family:"Times New Roman","serif"'>, </span><span
+  style='font-family:"Times New Roman","serif"'>&#9321;</span><span
+  style='font-family:"Times New Roman","serif"'>, and </span><span
+  style='font-family:"Times New Roman","serif"'>&#9322;</span><span
+  style='font-family:"Times New Roman","serif"'> in the Option dialog. See
+  Section 4. &#8216;Options&#8217; above for details.</span></p>
+  <p class=MsoNormal style='text-indent:9.0pt'><span style='font-size:12.0pt;
+  font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8217;none&#8217;]</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.05pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;batch&#8217;]</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.05pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;batch&#8217;],[&#8216;run&#8217;]</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.05pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;batch&#8217;],[&#8216;run&#8217;],[&#8216;item&#8217;]</span></p>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.05pt'>
+  <td width=439 valign=top style='width:329.4pt;border:none;border-bottom:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>[&#8216;batch&#8217;],[&#8216;run&#8217;],[&#8216;item&#8217;],[&#8216;score&#8217;]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.05pt'>
+  <td width=638 colspan=2 valign=top style='width:6.65in;border:none;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman","serif"'>* The
+  commands/options italicized are the places where your inputs need to be
+  placed.</span></p>
+  <p class=MsoNormal><span style='font-family:"Times New Roman","serif"'>** The
+  commands/options in quotation marks are the actual commands/options to be
+  input except the quotation marks.</span></p>
+  <p class=MsoNormal><span style='font-family:"Times New Roman","serif"'>***</span><span
+  style='font-family:"Times New Roman","serif"'> Each line of syntax is
+  delimited by a comma (&#8217;,&#8217;). There should be no space before and
+  after the comma.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>                     </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;Example #1: 3,000
+examinees and 50 items with 2PLM</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=347 height=193 id="Picture 17" src="manual_files/image017.jpg"></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+will generate 3000 theta scores from a normal distribution with a mean of 0 and
+a standard deviation of 1. Then, WinGen will generate 50 items with 2PLM
+(&#8216;a&#8217; parameters from a lognormal distribution with a mean of 0 and a
+SD of 0.5, and. &#8216;b&#8217; parameters from a normal distribution with a
+mean of 0 and a SD of 1). WinGen will store simulated response data into <i>&#8216;d:\templap\responses1.wgr&#8217;
+</i>WinGen does not replicate data (i.e., just simulate data one time). The
+response data will be simulated based on the logistic model scale (D=1.0). SEED
+values will be randomly chosen. WinGen will not generate syntax files for the
+programs for estimating parameters and WinGen will not generate a batch file,
+according to the specifications of the user.</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Example #2: Reading-in
+examinee and item data from files</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'><img width=352
+height=198 id="Picture 18" src="manual_files/image018.jpg"></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+will read-in examinees&#8217; data from the file named &#8216;<i>d:\templab\sample.wge&#8217;
+</i>Then, WinGen will read-in item parameter data from &#8216;<i>d:\templab\sample.wge&#8217;
+</i>WinGen will store simulated response data into &#8216;<i>d:\templap\responses2.wgr&#8217;
+</i>WinGen does not replicate data (i.e., just simulate data one time). The
+response data will be simulated based on the logistic model scale (D=1.0). SEED
+values will be 102134, 23,213421 for examinees, items, and responses,
+respectively although SEED values for examinees and items will not be used
+since the user had WinGen read-in from files . WinGen will not generate syntax
+files for the programs for estimating parameters and WinGen will not generate a
+batch file, according to the specifications of the user.</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Example #3: Generating
+examinees, using existing items in memory, replicating, and estimating</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=305 height=204 id="Picture 19" src="manual_files/image019.jpg"></span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'> </span></p>
+
+<p class=MsoNormal style='text-indent:.5in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+will generate 5000 examinee theta scores from a beta distribution with the
+distribution parameters of 1 and 3. Then, WinGen will read-in item parameter
+data from &#8216;<i>d:\templab\sample.wge&#8217; </i>WinGen will store
+simulated response data into <i>&#8216;d:\templap\responses3.wgr&#8217; </i>(actually,
+the response files will be saved with the name of &#8216;reponse3_1.wgr&#8217;,
+&#8216;reponse3_2.wgr&#8217;, &#8216;reponse3_3.wgr&#8217;,
+&#8216;reponse3_4.wgr&#8217;, and &#8216;reponse3_5.wgr&#8217; since you have a
+syntax for replicating this study 5 times). The response data will be simulated
+based on normal metric scale (D=1.7). SEED values will be randomly chosen.
+WinGen will generate syntax files for PARSCALE automatically (not from a sample
+code), and will generate a batch file to run PARSCALE for the 5 replications.
+PARSCALE will estimate only the item parameters.</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>Example #3: Simulating
+multidimensional IRT data (2 dimensions)</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'><img width=434
+height=228 id="Picture 20" src="manual_files/image020.jpg"></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>WinGen
+will generate 3000 examinees&#8217; theta for two dimensions. The first theta
+distribution will be drawn from a uniform distribution between &#8211;3 and 3. The
+vector of theta for the second dimension will be correlated with the first
+dimension of theta. Then, 20 items with MC3PLM will be generated (a-parameters
+from a lognormal distribution, b-parameters from a normal distribution, and
+c-parameters from a beta distribution). WinGen will store simulated response
+data into <i>&#8216;d:\templap\responses4.wgr&#8217;.  </i>WinGen will not
+replicate this study. The response data will be simulated based on logistic
+model scale (D=1.0). SEED values will be randomly chosen. WinGen will not
+generate syntax files for the programs for estimating parameters. WinGen will
+not generate a batch file.</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'>&nbsp;</p>
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'>&nbsp;</p>
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Cue
+File</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman","serif"'>A cue file is kind of a
+batch file with which WinGen runs multiple syntax files. It is simply a list of
+full file names of the syntax files. A cue file can be executed at &#8220;File&gt;Open
+and Run&gt; Cue File&#8221; on the menu bar.</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'>Example
+of a Cue File</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman","serif"'><img
+width=348 height=150 id="Picture 21" src="manual_files/image021.jpg"></span><span
+style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+</div>
+<p class="style6"><font size="0.6">Last updated:<span class="style4">
+  <!-- #BeginDate format:Am1 -->January 25, 2009<!-- #EndDate -->
+    </span><br />
+Created by (Chris) Kyung T. Han</font></p>
+<p>&nbsp;</p>
+</body>
+</html>
