@@ -1,102 +1,218 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		  <meta charset="utf-8" />
+		  <meta name="viewport" content="width=device-width, initial-scale=1" />
+		  <title>HanTest.NET – Psychometric Software Tools by Kyung (Chris) T. Han</title>
+	  <style>
+		      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<head>
-	<title>
-		HanTest.NET - Psychometric Software Tools by Kyung (Chris) T. Han
-	</title>
-	<style>
-		a{text-decoration:none}
-		a:hover{color:red}
-	</style>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+		      body {
+				        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+				        color: #2c2c2c;
+				        background: #fafafa;
+				        line-height: 1.6;
+			  }
 
-<body bgcolor=white text=black style="font-family:Arial,sans-serif">
-<br>
-	<center>
-	<table width=75% border=0>
-	<tr>
-	<th width=34%>
-	<center>
-	<img src="AHANS1386.jpg" width=250 >
-	</center>
-	</th>
-	<th width="66%">
-	<center>
-	<h2>&nbsp;</h2>
-	<h2>HanTest.NET</h2>
-	<p>by</p>
-	<h2>	Kyung &quot;Chris&quot; T. Han</h2>
-	<h3><br>
-	    <font color="navy">truetheta [at] gmail.com</font></h3>
-	</h2>
-	</center>
-	</th>
-	</tr>
-	</table>
-	</center>
+		      a { color: #1a5276; text-decoration: none; }
+		      a:hover { color: #c0392b; text-decoration: underline; }
 
-<hr color=maroon>
-<table width=100% border=0 color=black>
-<tr>
-<th width=25%>
-<p align=center><a href=#home><font color=maroon>&#8226 Home</font></a></p></th>
-<th width=25%>
-<p align=center><a href="#software"><font color=maroon>&#8226Software Downloads</font></a></p></th>
-<th width=25%>
-<p align=center><a href="#papers"><font color=maroon>&#8226Papers</font></a></p></th>
-<th width=25%>
-<p align=center><a href=#vita><font color=maroon>&#8226 VITA</font></a></p></th>
-</tr>
-</table>
-<hr color=maroon>
+		      .container {
+				        max-width: 760px;
+				        margin: 0 auto;
+				        padding: 0 24px;
+			  }
 
-<h3 id=home>About this site:</h3>
-<p>This website is for distributing psychometric research papers and computer  software programs that I authored/co-authored. They are all free of charge, but  the author(s) retain all copyrights. Please cite the software/papers  appropriately. </p>
-<p align=right><a href=#top><font size=2 color=darkred><u>TOP</u></font></a><br>
-</p>
-<p align=right>&nbsp;</p>
-<h3 id="software">Software Downloads:</h3>
-<p>For research and teaching purposes, you do not need to get any license to  use the computer software programs that are distributed from this website. For  commercial uses, please contact me first. Please note that the author(s) are not responsible for any results caused  by using the software. The author(s) do not provide any support for the  software but appreciate bug/error reports. </p>
-<ol type=1>
-  <li><a href="wingen/"><strong>WinGen3</strong></a> (2010):<br>
-  Windows Software that Generates IRT Parameters and Item Responses. <br>
-    <br>
+		      /* -- Header -- */
+		      header {
+				        padding: 48px 0 32px;
+				        border-bottom: 2px solid #1a5276;
+			  }
+		      header h1 {
+				        font-size: 28px;
+				        font-weight: 700;
+				        letter-spacing: -0.5px;
+				        color: #1a2332;
+			  }
+		      header p.subtitle {
+				        margin-top: 6px;
+				        font-size: 15px;
+				        color: #555;
+			  }
+		      header .contact {
+				        margin-top: 12px;
+				        font-size: 14px;
+				        color: #777;
+			  }
 
+		      /* -- Nav -- */
+		      nav {
+				        display: flex;
+				        gap: 24px;
+				        padding: 14px 0;
+				        border-bottom: 1px solid #e0e0e0;
+				        font-size: 14px;
+				        font-weight: 500;
+			  }
+		      nav a { color: #1a5276; }
+		      nav a:hover { color: #c0392b; text-decoration: none; }
 
-  <li><strong>IRTCook</strong> (2010):<br>
-   Software Tool for Massive IRT Analyses. <br>
-    <br>
+		      /* -- Sections -- */
+		      section {
+				        padding: 36px 0 24px;
+			  }
+		      section + section {
+				        border-top: 1px solid #eee;
+			  }
+		      section h2 {
+				        font-size: 18px;
+				        font-weight: 600;
+				        color: #1a2332;
+				        margin-bottom: 12px;
+			  }
+		      section p {
+				        font-size: 15px;
+				        color: #444;
+				        margin-bottom: 16px;
+			  }
 
-  <li><strong><a href="irteq/">IRTEQ</a></strong> (2009):<br>
-   Windows Application that Implements IRT Scaling and Equating. <br>
-    <br>
-  <li><a href="simulcat/"><strong>SimulCAT</strong></a> (2012):<br>
-  Windows Application that Simulates Computerized Adaptive Test Administration.  <br>
-  <br>
-  <li><strong><a href="mstgen/">MSTGen</a></strong> (2013):  <br>
-    Simulated data generator for multistage testing.<br>
-    <br>
-  <li><a href="hsgen/"><strong>HSGen</strong></a> (2007):<br>
-  Hierarchical Score Generator. <br>
-    <br>
-<li><a href="residplots/"><strong>ResidPlots2</strong></a> (2009)<br>
-   Computer Software for IRT Graphic Residual Analyses. <br>
-</ol>
-<p align=right><a href=#top><font size=2 color=darkred><u>TOP</u></font></a><br>
-</p>
-<p align=right>&nbsp;</p>
-<h3 id=papers>View <a href="HAN_vita.pdf">Han's CV</a></h3>
-<ul type=square>
+		      /* -- Software list -- */
+		      .software-list {
+				        list-style: none;
+			  }
+		      .software-list li {
+				        padding: 14px 0;
+				        border-bottom: 1px solid #f0f0f0;
+			  }
+		      .software-list li:last-child {
+				        border-bottom: none;
+			  }
+		      .software-list .name {
+				        font-weight: 600;
+				        font-size: 15px;
+			  }
+		      .software-list .year {
+				        font-size: 13px;
+				        color: #999;
+				        margin-left: 6px;
+			  }
+		      .software-list .desc {
+				        font-size: 14px;
+				        color: #555;
+				        margin-top: 3px;
+			  }
 
-  <p>&nbsp;</p>
-</ul>
-<p align=right><a href=#top><font size=2 color=darkred><u>TOP</u></font></a></p>
-<hr size=1 color=black>
-<address>
-<font size=0.6>
-Last updated: <font color=red>Jan. 18, 2018</font> <br>
-Created by Kyung (Chris) T. Han <br>
-Contact me: <u>truetheta [at] gmail.com</u></font>
-</address>
-</body>
-</html>
+		      /* -- Footer -- */
+		      footer {
+				        padding: 24px 0;
+				        border-top: 1px solid #ddd;
+				        margin-top: 12px;
+				        font-size: 13px;
+				        color: #999;
+			  }
+
+		      /* -- Responsive -- */
+		      @media (max-width: 600px) {
+				        header { padding: 32px 0 24px; }
+				        header h1 { font-size: 24px; }
+				        nav { flex-wrap: wrap; gap: 16px; }
+			  }
+		    </style>
+	</head>
+	<body>
+
+		<div class="container">
+
+			  <header>
+				      <h1>HanTest.NET</h1>
+			      <p class="subtitle">Psychometric Software Tools</p>p>
+			      <p class="contact">Kyung "Chris" T. Han · truetheta [at] gmail.com</p>p>
+			  </header>
+		
+		  <nav>
+			      <a href="#about">About</a>a>
+			      <a href="#software">Software</a>a>
+			      <a href="#papers">Papers</a>a>
+		  </nav>
+
+			  <section id="about">
+				      <h2>About</h2>
+				      <p>
+						        This site distributes psychometric research papers and software that I have authored or co-authored.
+						        Everything is free of charge, but the author(s) retain all copyrights. Please cite appropriately.
+					  </p>
+			  </section>section>
+
+			  <section id="software">
+				      <h2>Software Downloads</h2>
+				      <p>
+						        For research and teaching purposes, no license is required. For commercial use, please contact me first.
+						        The author(s) are not responsible for any results produced by the software and do not provide formal support,
+						        but bug reports are appreciated.
+					  </p>
+
+				      <ul class="software-list">
+						        <li>
+									        <span class="name"><a href="simulcat/">SimulCAT</a>a></span>span>
+									        <span class="year">2012</span>span>
+									        <div class="desc">Windows application that simulates computerized adaptive test administration.</div>div>
+								</li>
+						        <li>
+									        <span class="name"><a href="irteq/">IRTEQ</a>a></span>span>
+									        <span class="year">2009</span>span>
+									        <div class="desc">Windows application that implements IRT scaling and equating.</div>div>
+								</li>
+						        <li>
+									        <span class="name"><a href="wingen/">WinGen3</a>a></span>span>
+									        <span class="year">2010</span>span>
+									        <div class="desc">Windows software that generates IRT parameters and item responses.</div>div>
+								</li>
+						        <li>
+									        <span class="name"><a href="mstgen/">MSTGen</a>a></span>span>
+									        <span class="year">2013</span>span>
+									        <div class="desc">Simulated data generator for multistage testing.</div>div>
+								</li>
+						        <li>
+									        <span class="name"><a href="residplots/">ResidPlots2</a>a></span>span>
+									        <span class="year">2009</span>span>
+									        <div class="desc">Computer software for IRT graphic residual analyses.</div>div>
+								</li>
+						        <li>
+									        <span class="name"><a href="hsgen/">HSGen</a>a></span>span>
+									        <span class="year">2007</span>span>
+									        <div class="desc">Hierarchical score generator.</div>div>
+								</li>
+						        <li>
+									        <span class="name">IRTCook</span>span>
+									        <span class="year">2010</span>span>
+									        <div class="desc">Software tool for massive IRT analyses.</div>div>
+								</li>
+					  </ul>ul>
+			  </section>section>
+
+			  <section id="papers">
+				      <h2>Papers &amp; CV</h2>
+				      <p>
+						        <a href="HAN_vita.pdf">View Han's CV (PDF)</a>a>
+					  </p>
+			  </section>section>
+
+			  <footer>
+				      Last updated: March 2026 · Created by Kyung (Chris) T. Han
+			  </footer>
+
+		</div>div>
+
+	</body>
+</html>html>
+			  </footer>
+					  </p>
+								</li>
+								</li>
+					  </p>
+					  </p>
+		  </nav></h1>
+			  </header>
+	</body>
+	  </style></title>
+	</head>
