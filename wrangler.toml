@@ -1,0 +1,6 @@
+name = "hantest"
+account_id = "617b017e2752dbbeb2ffdde06fb2e4c7"
+compatibility_date = "2024-01-01"
+
+[assets]
+directory = "."
