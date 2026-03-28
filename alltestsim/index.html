@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AllTestSim – Unified CAT/MST Simulation Software (Coming Soon)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: #2c2c2c;
+      background: #fafafa;
+      line-height: 1.6;
+    }
+
+    a { color: #1a5276; text-decoration: none; }
+    a:hover { color: #c0392b; text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 48px 0 32px;
+      border-bottom: 2px solid #1a5276;
+    }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1a2332;
+    }
+    header p.subtitle {
+      margin-top: 6px;
+      font-size: 15px;
+      color: #555;
+    }
+    header .author {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      padding: 14px 0;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a { color: #1a5276; }
+    nav a:hover { color: #c0392b; text-decoration: none; }
+
+    section { padding: 32px 0 24px; }
+    section + section { border-top: 1px solid #eee; }
+    section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a2332;
+      margin-bottom: 12px;
+    }
+    section p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 12px;
+    }
+
+    /* -- Coming Soon badge -- */
+    .badge {
+      display: inline-block;
+      background: #1a5276;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 3px;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+
+    /* -- Feature preview cards -- */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .feature-card {
+      padding: 18px;
+      background: #fff;
+      border: 1px solid #e8edf2;
+      border-radius: 6px;
+    }
+    .feature-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a2332;
+      margin-bottom: 6px;
+    }
+    .feature-card p {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 0;
+    }
+
+    /* -- Timeline / status -- */
+    .status-box {
+      background: #f0f7fc;
+      border: 1px solid #c8ddf0;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 16px 0;
+      text-align: center;
+    }
+    .status-box .status-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a5276;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .status-box p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 0;
+    }
+
+    .citation-placeholder {
+      background: #f7f9fb;
+      border-left: 3px solid #ccc;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #999;
+      font-style: italic;
+    }
+
+
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid #ddd;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 24px; }
+      nav { flex-wrap: wrap; gap: 16px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .badge { display: block; margin: 8px 0 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>AllTestSim <span class="badge">Coming Soon</span></h1>
+    <p class="subtitle">Unified CAT &amp; MST Simulation Software</p>
+    <p class="author">Kyung (Chris) T. Han</p>
+  </header>
+
+  <nav>
+    <a href="../">Home</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#status">Status</a>
+  </nav>
+
+  <section id="about">
+    <h2>About AllTestSim</h2>
+    <p>
+      AllTestSim is a next-generation test simulation platform that brings WinGen + MSTGen + SimulCAT + a lot more, all into one unified environment. Building on over a decade of development experience, AllTestSim eliminates the need to switch between separate tools — enabling IRT data generation, CAT simulation, MST simulation, and beyond within a single, integrated framework.
+    </p>
+    <p>
+      Whether you are conducting fundamental research, evaluating operational test programs, or teaching adaptive testing concepts, AllTestSim provides a comprehensive, modern platform for all your test simulation needs.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Planned Features</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Unified CAT &amp; MST Engine</h3>
+        <p>Run CAT and MST simulations side by side using a shared simulation core, with consistent configuration and output formats.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Modern Architecture</h3>
+        <p>Built on .NET 10 with both GUI and command-line interfaces. Cross-platform console engine for Windows and macOS.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Advanced Exposure Control</h3>
+        <p>Comprehensive exposure control methods including Local Fade-Away (LFA) and panel-based designs for both CAT and MST modes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Comprehensive IRT Support</h3>
+        <p>Full support for dichotomous (1PL, 2PL, 3PL) and polytomous (GRM, GPCM, PCM, NRM) IRT models with mixed-model capability.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Batch &amp; Scripting</h3>
+        <p>Syntax file support and command-line interface for large-scale simulation studies and automated workflows.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Visual Analytics</h3>
+        <p>Auto-generated plots for exposure rates, score distributions, information functions, and comparison across simulation conditions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="status">
+    <h2>Development Status</h2>
+
+    <div class="status-box">
+      <p class="status-label">In Development</p>
+      <p>AllTestSim is currently under active development. Release date and download links will be announced here.</p>
+    </div>
+
+    <div class="citation-placeholder">
+      Citation information will be provided upon release.
+    </div>
+  </section>
+
+
+  <footer>
+    Last updated: March 2026 · Created by Kyung (Chris) T. Han ·
+    <a href="../">hantest.net</a>
+  </footer>
+
+</div>
+
+</body>
+</html>

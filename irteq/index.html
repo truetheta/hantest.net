@@ -1,348 +1,276 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>IRTEQ - Windows Application that Implements IRT Scaling and Equating</title>
-<style type="text/css">
-<!--
-body {
-	font: 100% Verdana, Arial, Helvetica, sans-serif;
-	background: #666666;
-	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
-	padding: 0;
-	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
-	color: #000000;
-}
-.oneColElsCtr #container {
-	width: 850px;
-	background: #FFFFFF;
-	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
-	border: 1px solid #000000;
-	text-align: left; /* this overrides the text-align: center on the body element. */
-}
-.oneColElsCtr #mainContent {
-	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
-}
-div.MsoTitle3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:0pt;
-	line-height:113%;
-	text-align:left;
-	font-family:"Arial Black";
-	font-size:16.0pt;
-	color:#006699;}
-li.MsoTitle3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:0pt;
-	line-height:113%;
-	text-align:left;
-	font-family:"Arial Black";
-	font-size:16.0pt;
-	color:#006699;}
-p.MsoTitle3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:0pt;
-	line-height:113%;
-	text-align:left;
-	font-family:"Arial Black";
-	font-size:16.0pt;
-	color:#006699;}
-div.MsoBodyText3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:9.0pt;
-	line-height:125%;
-	text-align:left;
-	font-family:Arial;
-	font-size:9.0pt;
-	color:black;}
-li.MsoBodyText3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:9.0pt;
-	line-height:125%;
-	text-align:left;
-	font-family:Arial;
-	font-size:9.0pt;
-	color:black;}
-p.MsoBodyText3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:9.0pt;
-	line-height:125%;
-	text-align:left;
-	font-family:Arial;
-	font-size:9.0pt;
-	color:black;}
-.style4 {color: #FF0000}
-.style7 {
-	font-size: 8pt
-}
-.style8 {
-	color: #FFFFFF;
-	font-size: 18pt;
-	font-weight: bold;
-}
-.style9 {font-size: 9px}
-.style10 {color: #FFFFFF}
-.style11 {
-	font-size: 12px;
-	font-weight: bold;
-}
-.style13 {
-	font-size: 10pt
-}
-.style14 {font-size: 10}
-.style15 {font-family: Arial, Helvetica, sans-serif}
--->
-</style></head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRTEQ – Windows Application that Implements IRT Scaling and Equating</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<body class="oneColElsCtr">
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: #2c2c2c;
+      background: #fafafa;
+      line-height: 1.6;
+    }
 
-<div id="container">
-  <div id="mainContent">
-    <table width="103%" border="0">
-      <tr>
-        <td width="20%" rowspan="2"><img src="index_files/image2335.jpg" width="241" height="145" alt="IRTEQ" /></td>
-        <td width="80%" height="121" bgcolor="#333333"><p align="center" class="MsoTitle3"><span class="style10" style='font-size:14.8999pt;line-height:
-  113%;font-family:&quot;Arial Black&quot;;language:en-US' lang="en-US" xml:lang="en-US">IRTEQ:</span></p>
-        <p align="center" class="MsoTitle3 style10"><span class="style10" style='font-size:10.3pt;line-height:113%; font-family:&quot;Arial Black&quot;;language:en-US' lang="en-US" xml:lang="en-US">Windows Application that Implements IRT Scaling and Equating</span></p>
-        <p align="center" class="MsoTitle3 style10"><span class="style10" style='font-size:10.3pt;line-height:113%; font-family:&quot;Arial Black&quot;;language:en-US' lang="en-US" xml:lang="en-US">Version 1.0</span></p></td>
-      </tr>
-      <tr>
-        <td width="80%" height="28"><p class="style11"> Kyung (Chris) T. Han</p></td>
-      </tr>
-    </table>
-    <p align="center" class="MsoTitle3">&nbsp;</p>
-    <h1 align="center"><img src="index_files/image2335.jpg" width="431" height="264" alt="IRTEQ" /></h1>
-    <div align="center"></div>
-    <table width="500" border="1" align="center">
-      <tr>
-        <td>
-          <p><span lang="en-US" xml:lang="en-US">Preferred Citation:</span></p>
-        <p><span lang="en-US" xml:lang="en-US">Han, K. T. (200</span><span lang="en-US" xml:lang="en-US">9</span><span lang="en-US" xml:lang="en-US">). IRTEQ: Windows application that implements IRT scaling and equating [computer program].&nbsp;</span><span lang="en-US" xml:lang="en-US">Applied Psychological Measurement, 33</span><span lang="en-US" xml:lang="en-US">(6), 491-493.</span></p></td>
-      </tr>
-    </table>
-    <p class="MsoBodyText3">&nbsp;</p>
-    <table width="100%" border="0" align="center">
-      <tr>
-        <td bgcolor="#666666"><div align="center"><span class="style8">about <em>IRTEQ</em></span></div></td>
-      </tr>
-    </table>
-    <div align="center"></div>
-    <p class="MsoBodyText3"><span style='font-family:Arial;language:
-  en-US' lang="en-US" xml:lang="en-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Maintaining comparability of scores from different forms of a test   (and/or from different test administrations) has been a major technical   challenge for psychometricians.&nbsp; Today with a major focus of state testing   programs on the assessment of growth, the challenge of maintaining comparability   of scores has become even more important.&nbsp; Over the years, several IRT based   scaling/equating methods have been developed to provide solutions (e.g.,   Hambleton, Swaminathan, &amp; Rogers, 1991;</span><span lang="en-US" xml:lang="en-US"> </span><span lang="en-US" xml:lang="en-US">Kolen &amp; Brennan, 2004</span><span lang="en-US" xml:lang="en-US">;</span><span lang="en-US" xml:lang="en-US"> </span><span lang="en-US" xml:lang="en-US">Lord, 1980).&nbsp; </span></p>
-<p><span lang="en-US" xml:lang="en-US">While equating methods research has flourished because of the need   for technically sound designs and analyses, software development has been   limited.&nbsp; The major testing companies of course have the software they need for   scaling and equating but software available for researchers and graduate   students is very limited.&nbsp; And, the few computer programs for test scaling and   equating that have been developed for wide use, do not always include features   of special interest to researchers.&nbsp; For example, available software cannot   handle all the popular IRT models being applied to test data, and cannot handle   some of the popular equating designs.&nbsp; Thus, a demand for a computer program   that is more generalized and powerful for various uses in research and test   development has grown in the field, and as a result, a Window application,   called IRTEQ, was developed to address that need. </span></p>
-    <p><span lang="en-US" xml:lang="en-US">&nbsp;</span></p>
-    <p><span lang="en-US" xml:lang="en-US"><em>1. IRTEQ can rescale a test form to another using various IRT scaling   methods.</em></span></p>
-    <p><span lang="ko" xml:lang="ko">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="en-US" xml:lang="en-US">There are a handful of IRT scaling/equating methods that are widely   used with an anchor test design (or called the &ldquo;Non-Equivalent Groups Anchor   Test&rdquo;): Mean/Mean (Loyd &amp; Hoover, 1980), Mean/Sigma (Marco, 1977), Robust   Mean/Sigma (Linn, Levine, Hastings, &amp; Wardrop, 198</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>1</span><span lang="en-US" xml:lang="en-US">), and TCC methods (Haebara, 1980; Stocking &amp; Lord, 1983).&nbsp; IRTEQ   can implement all of these methods with various options.&nbsp; For TCC methods   (Haebara, 1980; Stocking &amp; Lord, 1983), IRTEQ provides the user with the   option to choose various score distributions for incorporation into the loss   function.&nbsp; See Appendix A for more discussioin of these options. </span></p>
-    <p><span lang="en-US" xml:lang="en-US">&nbsp;</span></p>
-    <p><span lang="en-US" xml:lang="en-US"><em>2. IRTEQ supports various IRT models for test forms.</em></span></p>
-    <p><span lang="ko" xml:lang="ko">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="en-US" xml:lang="en-US">IRTEQ supports various popular unidimensional IRT models:&nbsp; Logistic   models for dichotomous responses (with 1, 2, or 3 parameters) and the   Generalized Partial Credit Model (GPCM) (including Partial Credit Model (PCM),   which is a special case of GPCM) and Graded Response Model (GRM) for polytomous   responses.&nbsp; A mixture of IRT models used to calibrate the items in the test   forms is also supported by the software, and the number of response categories   can also vary.&nbsp; There is practically no limit to the number of items in each   form or the linking item set (&gt;10,000,000).&nbsp; IRTEQ can import item parameters   and score data directly from WinGen (Han, 2007) and/or PARSCALE (Muraki &amp;   Bock, 2003).</span></p>
-    <p><span lang="en-US" xml:lang="en-US">&nbsp;</span></p>
-    <p><span lang="en-US" xml:lang="en-US"><em>3. IRTEQ can equate test scores on the scale of a test to another   test using IRT true score equating.</em></span></p>
-    <p><span lang="ko" xml:lang="ko">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="en-US" xml:lang="en-US">In addition to test item scaling, IRTEQ also implements true score   equating.&nbsp; Raw scores or test scores from one test form can be linked to another   test form, and a test score to test score conversion table is provided.&nbsp; This is   carried out using true score equating (see Lord, 1980).</span></p>
-    <p><span lang="en-US" xml:lang="en-US">&nbsp;</span></p>
-    <p><span lang="en-US" xml:lang="en-US">4. IRTEQ provides an intuitive, user-friendly interface and also   provides powerful research tools.</span></p>
-    <p><span lang="ko" xml:lang="ko">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="en-US" xml:lang="en-US">As a Windows application, IRTEQ employs intuitive, user-friendly   graphic user interface (GUI), so the whole process of scaling and equating can   be done with a few point-and-clicks.&nbsp; Also, IRTEQ can be operated with syntax   files and cue files (similar to a batch file of DOS) for more intensive uses.&nbsp;   Plots that compare a, b, and c-parameter estimates of the linking items across   test forms are provided.&nbsp; The provision is available to easily drop linking   items if they are identified as problematic in some sense.&nbsp; Test characteristic   curves for each test form, the linking item set, and the rescaled test form are   provided, too.&nbsp; </span></p>
-    <p><span lang="en-US" xml:lang="en-US">&nbsp;</span></p>
-    <p><span lang="en-US" xml:lang="en-US"><em>Figure 1</em></span><em><span lang="en-US" xml:lang="en-US">. IRTEQ   provides an intuitive, user-friendly graphic user interface.</span></em><span lang="en-US" xml:lang="en-US"></span></p>
-    <p align="center"><img src="index_files/image1397.png" width="641" height="481" /></p>
-    <p align="center"><img src="index_files/image2339.png" width="641" height="481" /></p>
-    <p align="center"><span lang="ko" xml:lang="ko">&nbsp;</span></p>
-    <p align="center"><img src="index_files/image2343.png" width="762" height="437" /></p>
-    <p><span lang="en-US" xml:lang="en-US">&nbsp;</span></p>
-    <p>&nbsp;</p>
-<p align="center"><span lang="en-US" xml:lang="en-US">References</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Hambleton, R. K.,   Swaminathan, H., &amp; Rogers, H. J.&nbsp; (1991).&nbsp; </span><span lang="en-US" xml:lang="en-US">Fundamentals of item   response theory</span><span lang="en-US" xml:lang="en-US">.&nbsp; Newbury Park,   CA:&nbsp; Sage Publications.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Han, K. T. (2007). IRTEQ:   Windows application that implements IRT scaling and equating [computer program].   Amherst, MA: University of Massachusetts, Center for Educational Assessment.   Retrieved Nov 1, 2007, from </span><a href="http://www.umass.edu/remp/software/irteq/"><span lang="en-US" xml:lang="en-US">http://www.umass.edu/remp/software/irteq/</span></a></p>
-    <p><span lang="en-US" xml:lang="en-US">Han, K. T. (2007).   WinGen: Windows software that generates IRT parameters and item responses. </span><span lang="en-US" xml:lang="en-US">Applied   Psychological Measurement, 31</span><span lang="en-US" xml:lang="en-US">(5), 457-459.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Kolen, M.   J., &amp; Brennan, R. L. (2004). </span><span lang="en-US" xml:lang="en-US">Test equating, linking, and scaling: Methods and   practices</span><span lang="en-US" xml:lang="en-US"> (2nd   ed.). New York: Springer-Verlag.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Linn, R.   L., Levine, M. V., Hastings, C. N., &amp; Wardrop, J. L. (1981). Item bias in a   test of reading comprehension.</span><span lang="en-US" xml:lang="en-US"> Applied Psychological Measurement, 5</span><span lang="en-US" xml:lang="en-US">,   159-173.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Lord, F.   M.&nbsp; (1980).&nbsp; </span><span lang="en-US" xml:lang="en-US">Applications of item response theory to practical testing   problems</span><span lang="en-US" xml:lang="en-US">.&nbsp; Hillsdale, NJ:&nbsp; Lawrence Erlbaum Publishers. </span></p>
-    <p><span lang="en-US" xml:lang="en-US">Loyd, B.   H., &amp; Hoover, H. D. (1980). Vertical equating using the Rasch model. </span><span lang="en-US" xml:lang="en-US">Journal of Educational Measurement, 17</span><span lang="en-US" xml:lang="en-US">,   179-193.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Marco, G.   L. (1977). Item characteristic curve solutions to three intractable testing   problems. </span><span lang="en-US" xml:lang="en-US">Journal of Educational Measurement, 14</span><span lang="en-US" xml:lang="en-US">(2),   139-160.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Microsoft. (2002).&nbsp; </span><span lang="en-US" xml:lang="en-US">Microsoft Windows XP</span><span lang="en-US" xml:lang="en-US"> [computer program]. Redmond, WA: Author.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Microsoft. (2005).&nbsp; </span><span lang="en-US" xml:lang="en-US">Microsoft .NET framework version 2.0</span><span lang="en-US" xml:lang="en-US"> [computer program]. Redmond, WA: Author.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Muraki,   E., &amp; Bock, R. D. (2003). </span><span lang="en-US" xml:lang="en-US">PARSCALE 4: IRT item analysis and test scoring for rating-scale data </span><span lang="en-US" xml:lang="en-US">[computer program]. Chicago, IL: Scientific Software.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Stocking,   M. L., &amp; Lord, F. M. (1983). Developing a common metric in item response   theory. </span><span lang="en-US" xml:lang="en-US">Applied Psychological Measurement, 7, </span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>201-210.</span></p>
-    <p><span lang="en-US" xml:lang="en-US">&nbsp;</span></p>
-    <p align="center"><span lang="en-US" xml:lang="en-US"><strong>APPENDIX A</strong></span></p>
-    <p align="center"><span lang="en-US" xml:lang="en-US">Loss Functions for TCC Scaling Methods in IRTEQ</span></p>
-    <p><span lang="en-US" xml:lang="en-US">Haebara (1980) came up with an idea in which a TCC of the linking   items in test Form 1 is directly compared to the other TCC of the linking items   rescaled in Form 2.&nbsp; The scaling coefficients that minimize the difference   between the two TCCs are to be obtained as the best scaling coefficients in his   method.&nbsp; A loss function that is used to compare the two TCC is expressed   as</span></p>
-    <p>&nbsp; </p>
-    <table dir="ltr" border="0" cellspacing="0" cellpadding="0" width="721" height="58">
-      <tbody>
-        <tr>
-          <td height="58" width="102"><p><span lang="ko" xml:lang="ko">&nbsp;</span></p></td>
-          <td height="58" width="506"><p align="center"><span lang="en-US" xml:lang="en-US"><img src="index_files/1.gif" width="446" height="58" />,</span></p></td>
-          <td height="58" width="112"><p align="right"><span lang="en-US" xml:lang="en-US">(</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>1</span><span lang="en-US" xml:lang="en-US">)</span></p></td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-    <p><span lang="en-US" xml:lang="en-US">where</span></p>
-    <p>&nbsp; </p>
-    <table dir="ltr" border="0" cellspacing="0" cellpadding="0" width="725" height="60">
-      <tbody>
-        <tr>
-          <td height="60" valign="top" width="213"><p><span lang="ko" xml:lang="ko">&nbsp;</span></p></td>
-          <td height="60" valign="top" width="299"><p align="center"><span lang="ko" xml:lang="ko">&nbsp;<img src="index_files/2.gif" width="91" height="55" /></span><span lang="en-US" xml:lang="en-US">,</span></p></td>
-          <td height="60" valign="top" width="213"><p align="right"><span lang="en-US" xml:lang="en-US">(2)</span></p></td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-    <p><span lang="en-US" xml:lang="en-US">and</span></p>
-    <p>&nbsp; </p>
-    <table dir="ltr" border="0" cellspacing="0" cellpadding="0" width="729" height="43">
-      <tbody>
-        <tr>
-          <td height="43" valign="top" width="213"><p><span lang="ko" xml:lang="ko">&nbsp;</span></p></td>
-          <td height="43" valign="top" width="303"><p align="center"><span lang="en-US" xml:lang="en-US"><img src="index_files/3.gif" width="131" height="33" />.</span></p></td>
-          <td height="43" valign="top" width="213"><p align="right"><span lang="en-US" xml:lang="en-US">(3)</span></p></td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-    <p><span lang="en-US" xml:lang="en-US">In Equation (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>1</span><span lang="en-US" xml:lang="en-US">), </span><span lang="en-US" xml:lang="en-US">p</span><span lang="en-US" xml:lang="en-US">ij</span><span lang="en-US" xml:lang="en-US"> is an item characteristic function for </span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US">-th examinee and </span><span lang="en-US" xml:lang="en-US">j</span><span lang="en-US" xml:lang="en-US">-th item, and </span><span lang="en-US" xml:lang="en-US">, and </span><span lang="en-US" xml:lang="en-US">are discrimination, difficulty, and pseudo-guessing parameters,   respectively, for </span><span lang="en-US" xml:lang="en-US">j</span><span lang="en-US" xml:lang="en-US">-th linking item in test form 1, and </span><span lang="en-US" xml:lang="en-US">m</span><span lang="en-US" xml:lang="en-US"> is the number of the linking items.&nbsp; By Equations (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>2</span><span lang="en-US" xml:lang="en-US">) and (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>3</span><span lang="en-US" xml:lang="en-US">), the linking items in Form 2 are rescaled then used in the loss   function (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>1</span><span lang="en-US" xml:lang="en-US">).&nbsp; The loss function is evaluated across all examinees, and the   scaling coefficients </span><span lang="en-US" xml:lang="en-US">A </span><span lang="en-US" xml:lang="en-US">and</span><span lang="en-US" xml:lang="en-US"> B</span><span lang="en-US" xml:lang="en-US"> are decided when</span></p>
-    <p>&nbsp; </p>
-    <table dir="ltr" border="0" cellspacing="0" cellpadding="0" width="725" height="64">
-      <tbody>
-        <tr>
-          <td height="63" valign="top" width="213"><p><span lang="ko" xml:lang="ko">&nbsp;</span></p></td>
-          <td height="63" valign="top" width="299"><p align="center"><span lang="en-US" xml:lang="en-US"><img src="index_files/4.gif" width="115" height="56" />,</span></p></td>
-          <td height="63" valign="top" width="213"><p align="right"><span lang="en-US" xml:lang="en-US">(</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>4</span><span lang="en-US" xml:lang="en-US">)</span></p></td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-    <p><span lang="en-US" xml:lang="en-US">where </span><span lang="en-US" xml:lang="en-US">N</span><span lang="en-US" xml:lang="en-US"> is the number of examinees, </span><span lang="en-US" xml:lang="en-US">and </span><span lang="el" xml:lang="el">&theta;</span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US"> is </span><span lang="en-US" xml:lang="en-US">the proficiency of </span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US">-th examinee (Haebara, 1980).&nbsp; Although Equation (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>4</span><span lang="en-US" xml:lang="en-US">) results in the optimized scaling coefficients for the particular   examinee distribution, with this method, the scaling coefficients become   examinee-dependent.&nbsp; Thus, the Equation (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>4</span><span lang="en-US" xml:lang="en-US">) is often replaced by</span></p>
-    <p>&nbsp; </p>
-    <table dir="ltr" border="0" cellspacing="0" cellpadding="0" width="725" height="64">
-      <tbody>
-        <tr>
-          <td height="63" valign="top" width="213"><p><span lang="ko" xml:lang="ko">&nbsp;</span></p></td>
-          <td height="63" valign="top" width="299"><p align="center"><span lang="en-US" xml:lang="en-US"><img src="index_files/5.gif" width="115" height="56" />,</span></p></td>
-          <td height="63" valign="top" width="213"><p align="right"><span lang="en-US" xml:lang="en-US">(</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>5</span><span lang="en-US" xml:lang="en-US">)</span></p></td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-    <p><span lang="en-US" xml:lang="en-US">where </span><span lang="en-US" xml:lang="en-US">Q</span><span lang="en-US" xml:lang="en-US"> is the number of the quadrature points within a certain range on   theta scale, and </span><span lang="el" xml:lang="el">&theta;</span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US"> is the theta value at </span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US">-th quadrature point.&nbsp; With Equation (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>5</span><span lang="en-US" xml:lang="en-US">), the scaling coefficients obtained are not sample-dependent, and   the loss function is uniformly evaluated in the targeted range.&nbsp; However, this   method may not be preferable since the loss function evaluation is truncated   around the range of the quadrature points, and, since the loss functions at the   theta points where actual examinees would not be densely observed are as equally   weighted as where most examinees are distributed.&nbsp; In another approach (Han,   2007), Equation (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>5</span><span lang="en-US" xml:lang="en-US">) is replaced by</span></p>
-    <p>&nbsp; </p>
-    <table dir="ltr" border="0" cellspacing="0" cellpadding="0" width="729" height="64">
-      <tbody>
-        <tr>
-          <td height="63" valign="top" width="213"><p><span lang="ko" xml:lang="ko">&nbsp;</span></p></td>
-          <td height="63" valign="top" width="303"><p align="center"><span lang="en-US" xml:lang="en-US"><img src="index_files/6.gif" width="183" height="56" />,</span></p></td>
-          <td height="63" valign="top" width="213"><p align="right"><span lang="en-US" xml:lang="en-US">(</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>6</span><span lang="en-US" xml:lang="en-US">)</span></p></td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-    <p><span lang="en-US" xml:lang="en-US">where the </span><span lang="en-US" xml:lang="en-US">is a probability density function (PDF) for a normal distribution.&nbsp;   With this criterion for evaluating the loss functions, the scaling coefficients   are not sample dependent.&nbsp; Since those loss functions that are around </span><span lang="el" xml:lang="el">&mu;</span><span lang="el" xml:lang="el"> </span><span lang="en-US" xml:lang="en-US">receive more weights, the scaling coefficients can be optimized where   the most examinees are expected.&nbsp; In order that Equation (</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>6</span><span lang="en-US" xml:lang="en-US">) is appropriately used as a evaluation criterion for the loss   functions, the normal distribution that would represents the actual population   well should be chosen.&nbsp; In Figure </span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>1</span><span lang="en-US" xml:lang="en-US">, those three approaches to loss function evaluation are compared. </span></p>
-    <p><span lang="en-US" xml:lang="en-US">Stocking and Lord (198</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>3</span><span lang="en-US" xml:lang="en-US">) also provided a TCC scaling method, which is very similar to   Haebara (1980).&nbsp; The only difference between the two methods is the computation   of a loss function.&nbsp; In Stocking et al. (198</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>3</span><span lang="en-US" xml:lang="en-US">), a loss function at a score point </span><span lang="el" xml:lang="el">&theta;</span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US"> is defined as </span></p>
-    <p>&nbsp; </p>
-    <table dir="ltr" border="0" cellspacing="0" cellpadding="0" width="725" height="54">
-      <tbody>
-        <tr>
-          <td height="54" width="124"><p><span lang="ko" xml:lang="ko">&nbsp;</span></p></td>
-          <td height="54" width="494"><p align="center"><span lang="en-US" xml:lang="en-US"><img src="index_files/7.gif" width="470" height="58" />.</span></p></td>
-          <td height="54" width="107"><p align="right"><span lang="en-US" xml:lang="en-US">(</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>7</span><span lang="en-US" xml:lang="en-US">)</span></p></td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-    <p><span lang="en-US" xml:lang="en-US">Haebara (1980) and Stocking et al. (198</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"></span>3</span><span lang="en-US" xml:lang="en-US">) methods usually result in scaling coefficients that are very close   to each other even though the minimized values of the loss functions are   different. </span></p>
-    <p><span lang="ko" xml:lang="ko"><br />
-    </span><span lang="en-US" xml:lang="en-US"><em>Figure A. </em></span><em><span lang="en-US" xml:lang="en-US">Three Possible Distributions to Use in IRTEQ to Specify the Weighted   Loss Functions (Uniform, Normal, and Actual)</span></em><span lang="en-US" xml:lang="en-US"></span>.</p>
-<div align="center">
-  <table dir="ltr" border="1" cellspacing="0" cellpadding="0" width="90%" height="579">
-        <tbody>
-          <tr>
-            <td height="24" width="145"><p align="center"><span lang="en-US" xml:lang="en-US">Distribution</span></p></td>
-            <td height="24" width="217"><p align="center"><span lang="en-US" xml:lang="en-US">Integral   of Loss Function</span></p></td>
-            <td height="24" width="270"><p align="center"><span lang="en-US" xml:lang="en-US">Minimization to Estimate A and B</span></p></td>
-          </tr>
-          <tr>
-            <td height="164" width="145"><p align="center"><span lang="en-US" xml:lang="en-US">Uniform</span></p></td>
-            <td height="164" width="217"><div align="center"><img src="index_files/image2390.gif" width="201" height="156" /></div></td>
-            <td height="164" width="270"><p align="center"><span lang="en-US" xml:lang="en-US"><img src="index_files/5.gif" width="115" height="56" />,</span></p>
-              <p><span lang="en-US" xml:lang="en-US">where </span><span lang="en-US" xml:lang="en-US">Q</span><span lang="en-US" xml:lang="en-US"> is   the number of the quadrature points within a certain range on theta scale, and </span><span lang="el" xml:lang="el">&theta;</span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US"> is the theta value at </span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US">-th   quadrature point.&nbsp; </span></p></td>
-          </tr>
-          <tr>
-            <td height="204" width="145"><p align="center"><span lang="en-US" xml:lang="en-US">Normal</span></p></td>
-            <td height="204" width="217"><div align="center"><img src="index_files/image2392.gif" width="201" height="195" /></div></td>
-            <td height="204" width="270"><p align="center"><img src="index_files/6.gif" width="183" height="56" /></p>
-              <p><span lang="en-US" xml:lang="en-US">where the <img src="index_files/nuq.gif" width="43" height="35" /></span><span lang="en-US" xml:lang="en-US">is a probability density function (PDF) for a normal   distribution</span><span lang="en-US" xml:lang="en-US"> </span></p></td>
-          </tr>
-          <tr>
-            <td height="187" width="145"><p align="center"><span lang="en-US" xml:lang="en-US">Actual</span></p></td>
-            <td height="187" width="217"><div align="center"><img src="index_files/image2323.gif" width="201" height="178" /></div></td>
-            <td height="187" width="270"><p align="center"><span lang="en-US" xml:lang="en-US"><img src="index_files/4.gif" width="115" height="56" />,</span></p>
-              <p><span lang="en-US" xml:lang="en-US">where </span><span lang="en-US" xml:lang="en-US">N</span><span lang="en-US" xml:lang="en-US"> is   the number of examinees, and </span><span lang="el" xml:lang="el">&theta;</span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US"> is the proficiency of </span><span lang="en-US" xml:lang="en-US">i</span><span lang="en-US" xml:lang="en-US">-th   examinee.</span><span lang="en-US" xml:lang="en-US"> </span></p></td>
-          </tr>
-        </tbody>
-      </table>
+    a { color: #1a5276; text-decoration: none; }
+    a:hover { color: #c0392b; text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 48px 0 32px;
+      border-bottom: 2px solid #1a5276;
+    }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1a2332;
+    }
+    header h1 span.version {
+      font-size: 15px;
+      font-weight: 400;
+      color: #888;
+      margin-left: 8px;
+    }
+    header p.subtitle {
+      margin-top: 6px;
+      font-size: 15px;
+      color: #555;
+    }
+    header .author {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      padding: 14px 0;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a { color: #1a5276; }
+    nav a:hover { color: #c0392b; text-decoration: none; }
+
+    section { padding: 32px 0 24px; }
+    section + section { border-top: 1px solid #eee; }
+    section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a2332;
+      margin-bottom: 12px;
+    }
+    section h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a2332;
+      margin: 20px 0 8px;
+      font-style: italic;
+    }
+    section p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 12px;
+    }
+
+    .citation {
+      background: #f7f9fb;
+      border-left: 3px solid #1a5276;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #444;
+    }
+    .citation strong {
+      display: block;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .screenshot {
+      margin: 24px 0;
+      text-align: center;
+    }
+    .screenshot img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+    }
+    .screenshot .caption {
+      font-size: 13px;
+      color: #777;
+      margin-top: 8px;
+    }
+
+    .download-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 12px 16px;
+      margin: 8px 0;
+      background: #f7f9fb;
+      border: 1px solid #e8edf2;
+      border-radius: 6px;
+      transition: border-color 0.15s;
+    }
+    .download-item:hover { border-color: #1a5276; }
+    .download-item a {
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .download-item .note {
+      font-size: 13px;
+      color: #777;
+    }
+
+
+    /* -- References -- */
+    .references {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.8;
+    }
+    .references p {
+      font-size: 13px;
+      margin-bottom: 6px;
+      padding-left: 24px;
+      text-indent: -24px;
+    }
+
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid #ddd;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 24px; }
+      nav { flex-wrap: wrap; gap: 16px; }
+      .download-item { flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>IRTEQ <span class="version">v1.0</span></h1>
+    <p class="subtitle">Windows Application that Implements IRT Scaling and Equating</p>
+    <p class="author">Kyung (Chris) T. Han</p>
+  </header>
+
+  <nav>
+    <a href="../">Home</a>
+    <a href="#about">About</a>
+    <a href="#screenshots">Screenshots</a>
+    <a href="#downloads">Downloads</a>
+  </nav>
+
+  <section>
+    <div class="citation">
+      <strong>Preferred Citation</strong>
+      Han, K. T. (2009). IRTEQ: Windows application that implements IRT scaling and equating. <em>Applied Psychological Measurement, 33</em>(6), 491–493.
     </div>
-    <div align="center"></div>
-    <p align="justify">&nbsp;</p>
-    <table width="100%" border="0" align="center">
-      <tr>
-        <td bgcolor="#666666"><div align="center"><span class="style8">Downloads</span></div></td>
-      </tr>
-    </table>
-    <p class="style13"><span style='language:en-US' lang="en-US" xml:lang="en-US">Note: <em>IRTEQ</em> has been developed for </span><span style='font-family:Arial;font-style:italic;language:en-US'
-  lang="en-US" xml:lang="en-US">Microsoft Windows Vista (32bit or 64bit)</span></i> or later version (<i>ex. Windows 7</i>). </span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US">If your system is </span><span
-  style='font-family:Arial;font-style:italic;language:en-US' lang="en-US" xml:lang="en-US">Windows XP</span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US"> Family and you have not installed </span><span style='font-family:Arial;font-style:italic;language:en-US'
-  lang="en-US" xml:lang="en-US">Microsoft .NET framework 3.5 </span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US">on your system before, </span><span style='font-family:Arial;color:#CC0000;language:en-US'
-  lang="en-US" xml:lang="en-US">it is necessary to install </span><span style='font-family:Arial;color:#CC0000;font-style:italic;
-  language:en-US'
-  lang="en-US" xml:lang="en-US">.NET framework </span><span style='font-family:
-  Arial;color:#CC0000;language:en-US' lang="en-US" xml:lang="en-US">2.0 first (Download <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&amp;displaylang=en">Here</a>)</span><span
-  style='language:en-US' lang="en-US" xml:lang="en-US">. </span></p>
-    <p class="style13"><span style='language:en-US' lang="en-US" xml:lang="en-US">If you are not sure if your system has </span><span style='font-family:Arial;font-style:italic;language:en-US'
-  lang="en-US" xml:lang="en-US">.NET framework</span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US">, just run &#8217;setup.exe&#8217; file in IRTEQ_Han.zip. The installation program will automatically check your system and download .</span><span style='font-family:Arial;font-style:italic;language:en-US'
-  lang="en-US" xml:lang="en-US">NET framework</span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US"> from </span><span
-  style='font-family:Arial;font-style:italic;language:en-US' lang="en-US" xml:lang="en-US">Microsoft</span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US"> website if your system does not have it. However, it could take up to an hour depending on computer. </span></p>
-    <p><span lang="en-US" xml:lang="en-US">IRTEQ</span><span lang="en-US" xml:lang="en-US">&nbsp;(</span><span lang="en-US" xml:lang="en-US">October</span><span lang="en-US" xml:lang="en-US">&nbsp;</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"> </span>17</span><span lang="en-US" xml:lang="en-US">, 2018)&nbsp;</span><span lang="en-US" xml:lang="en-US"><br />
-      </span><a href="IRTEQ_Han.zip"><span lang="en-US" xml:lang="en-US">Download (</span><span lang="en-US" xml:lang="en-US">IRTEQ</span><span lang="en-US" xml:lang="en-US">_Han.zip)</span></a><span lang="en-US" xml:lang="en-US">&nbsp;<br />
-    </span><span lang="en-US" xml:lang="en-US">Size:</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"> </span>534</span><span lang="en-US" xml:lang="en-US">Kbyte</span></p>
-    <p><span lang="en-US" xml:lang="en-US">IRTEQ</span><span lang="en-US" xml:lang="en-US">&nbsp;</span><span lang="en-US" xml:lang="en-US">User&rsquo;s Manual&nbsp;</span><span lang="en-US" xml:lang="en-US">(</span><span lang="en-US" xml:lang="en-US">November</span><span lang="en-US" xml:lang="en-US">&nbsp;</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"> </span>1</span><span lang="en-US" xml:lang="en-US">, 2007)&nbsp;</span><span lang="en-US" xml:lang="en-US"><br />
-    </span><a href="IRTEQ_manual.pdf"><span lang="en-US" xml:lang="en-US">Download (</span><span lang="en-US" xml:lang="en-US">IRTEQ_manual</span><span lang="en-US" xml:lang="en-US">.pdf)</span></a><span lang="en-US" xml:lang="en-US"> </span></p>
-    <p><span lang="en-US" xml:lang="en-US">IRTEQ Example Data</span><span lang="en-US" xml:lang="en-US">&nbsp;(</span><span lang="en-US" xml:lang="en-US">November</span><span lang="en-US" xml:lang="en-US">&nbsp;</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"> </span>1</span><span lang="en-US" xml:lang="en-US">, 2007)&nbsp;</span><span lang="en-US" xml:lang="en-US"><br />
-      </span><span lang="en-US" xml:lang="en-US">The file must be extracted in &ldquo;C:\&rdquo;.&nbsp; The example files should be in &ldquo;C:\IRTEQ\EXAMPLES&rdquo;.&nbsp;</span><span lang="en-US" xml:lang="en-US"><br />
-        </span><a href="IRTEQ_exampleFiles.zip"><span lang="en-US" xml:lang="en-US">Download (</span><span lang="en-US" xml:lang="en-US">IRTEQ</span><span lang="en-US" xml:lang="en-US">_</span><span lang="en-US" xml:lang="en-US">exampleFiles</span><span lang="en-US" xml:lang="en-US">.zip)</span></a><span lang="en-US" xml:lang="en-US">&nbsp;<br />
-        </span><span lang="en-US" xml:lang="en-US">Size:</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"> </span>4</span><span lang="en-US" xml:lang="en-US">Kbyte</span></p>
-<p class="MsoBodyText3 style14">&nbsp;</p>
-    <p>&nbsp;</p>
-<hr />
-    <table width="100%" border="2">
-      <tr>
-        <td width="34%"><p align="center"><a href="http://www.hantest.net/wingen" target="_self" class="style13">WinGen2</a><br />
-        <span class="style9">Windows software that Generates IRT parameters and responses</span></p>        </td>
-        <td width="33%"><p align="center"><a href="http://www.hantest.net/simulcat" target="_self" class="style13">SimulCAT</a><br />
-        <span class="style9">Windows Application that Simulates Computerized Adaptive Test Administration</span></p>        </td>
-        <td width="33%"><div align="center"><a href="http://www.umass.edu/remp" target="_self" class="style13">REMP</a><br />
-            <span class="style9">Research and Evaluation Methods Program</span><br />
-        </div></td>
-      </tr>
-    </table>
-    <hr />
-    <p class="style7">Last updated:<span class="style4">October 17, 2018</span>     <br />
-    Created by  Kyung (Chris) T. Han      </p>
-  </div>
-<!-- end #container --></div>
+  </section>
+
+  <section id="about">
+    <h2>About IRTEQ</h2>
+    <p>
+      Maintaining comparability of scores from different forms of a test (and/or from different test administrations) has been a major technical challenge for psychometricians. Today, with a major focus of state testing programs on the assessment of growth, the challenge of maintaining comparability of scores has become even more important. Over the years, several IRT-based scaling/equating methods have been developed to provide solutions (e.g., Hambleton, Swaminathan, &amp; Rogers, 1991; Kolen &amp; Brennan, 2004; Lord, 1980).
+    </p>
+    <p>
+      While equating methods research has flourished, software development has been limited. The few computer programs for test scaling and equating that have been developed for wide use do not always include features of special interest to researchers — for example, available software cannot handle all the popular IRT models being applied to test data, and cannot handle some of the popular equating designs. IRTEQ was developed to address that need.
+    </p>
+
+    <h3>1. Various IRT Scaling Methods</h3>
+    <p>
+      IRTEQ can rescale a test form to another using widely used IRT scaling/equating methods with an anchor test design: Mean/Mean (Loyd &amp; Hoover, 1980), Mean/Sigma (Marco, 1977), Robust Mean/Sigma (Linn, Levine, Hastings, &amp; Wardrop, 1981), and TCC methods (Haebara, 1980; Stocking &amp; Lord, 1983). For TCC methods, IRTEQ provides the option to choose various score distributions for incorporation into the loss function.
+    </p>
+
+    <h3>2. Support for Various IRT Models</h3>
+    <p>
+      IRTEQ supports various popular unidimensional IRT models: logistic models for dichotomous responses (with 1, 2, or 3 parameters), the Generalized Partial Credit Model (GPCM), Partial Credit Model (PCM), and Graded Response Model (GRM) for polytomous responses. A mixture of IRT models is also supported, and the number of response categories can vary. There is practically no limit to the number of items in each form or the linking item set (&gt;10,000,000). IRTEQ can import item parameters and score data directly from WinGen and/or PARSCALE.
+    </p>
+
+    <h3>3. True Score Equating</h3>
+    <p>
+      In addition to test item scaling, IRTEQ implements true score equating. Raw scores or test scores from one test form can be linked to another test form, and a test score to test score conversion table is provided using true score equating (see Lord, 1980).
+    </p>
+
+    <h3>4. User-Friendly Interface &amp; Research Tools</h3>
+    <p>
+      As a Windows application, IRTEQ employs an intuitive, user-friendly graphical user interface (GUI), so the whole process of scaling and equating can be done with a few point-and-clicks. IRTEQ can also be operated with syntax files and cue files for more intensive uses. Plots comparing a, b, and c-parameter estimates of the linking items across test forms are provided. Test characteristic curves for each test form, the linking item set, and the rescaled test form are also provided.
+    </p>
+  </section>
+
+  <section id="screenshots">
+    <h2>Screenshots</h2>
+    <div class="screenshot">
+      <img src="index_files/image1397.png" alt="IRTEQ Interface - Main Window" />
+      <p class="caption">IRTEQ provides an intuitive, user-friendly graphical user interface</p>
+    </div>
+    <div class="screenshot">
+      <img src="index_files/image2339.png" alt="IRTEQ Interface - Results" />
+    </div>
+    <div class="screenshot">
+      <img src="index_files/image2343.png" alt="IRTEQ Interface - TCC Comparison" />
+    </div>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <p>Requires Microsoft Windows Vista or later with .NET Framework 2.0 or higher.</p>
+
+    <div class="download-item">
+      <a href="IRTEQ_Han.zip">IRTEQ</a>
+      <span class="note">October 17, 2018 · 534 KB</span>
+    </div>
+    <div class="download-item">
+      <a href="IRTEQ_manual.pdf">User's Manual (PDF)</a>
+    </div>
+    <div class="download-item">
+      <a href="IRTEQ_exampleFiles.zip">Example Files</a>
+      <span class="note">Extract to C:\IRTEQ\EXAMPLES</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <div class="references">
+      <p>Hambleton, R. K., Swaminathan, H., &amp; Rogers, H. J. (1991). <em>Fundamentals of item response theory</em>. Newbury Park, CA: Sage Publications.</p>
+      <p>Kolen, M. J., &amp; Brennan, R. L. (2004). <em>Test equating, linking, and scaling: Methods and practices</em> (2nd ed.). New York: Springer-Verlag.</p>
+      <p>Linn, R. L., Levine, M. V., Hastings, C. N., &amp; Wardrop, J. L. (1981). Item bias in a test of reading comprehension. <em>Applied Psychological Measurement, 5</em>, 159–173.</p>
+      <p>Lord, F. M. (1980). <em>Applications of item response theory to practical testing problems</em>. Hillsdale, NJ: Lawrence Erlbaum Publishers.</p>
+      <p>Loyd, B. H., &amp; Hoover, H. D. (1980). Vertical equating using the Rasch model. <em>Journal of Educational Measurement, 17</em>, 179–193.</p>
+      <p>Marco, G. L. (1977). Item characteristic curve solutions to three intractable testing problems. <em>Journal of Educational Measurement, 14</em>(2), 139–160.</p>
+      <p>Stocking, M. L., &amp; Lord, F. M. (1983). Developing a common metric in item response theory. <em>Applied Psychological Measurement, 7</em>, 201–210.</p>
+    </div>
+  </section>
+
+
+  <footer>
+    Last updated: March 2026 · Created by Kyung (Chris) T. Han ·
+    <a href="../">hantest.net</a>
+  </footer>
+
+</div>
+
 </body>
 </html>

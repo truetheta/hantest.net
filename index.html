@@ -59,7 +59,7 @@
 
     /* -- Sections -- */
     section {
-      padding: 36px 0 24px;
+      padding: 32px 0 24px;
     }
     section + section {
       border-top: 1px solid #eee;
@@ -81,11 +81,16 @@
       list-style: none;
     }
     .software-list li {
-      padding: 14px 0;
-      border-bottom: 1px solid #f0f0f0;
+      padding: 16px 18px;
+      margin: 8px 0;
+      border: 1px solid #e8edf2;
+      border-radius: 6px;
+      background: #fff;
+      transition: border-color 0.15s, box-shadow 0.15s;
     }
-    .software-list li:last-child {
-      border-bottom: none;
+    .software-list li:hover {
+      border-color: #1a5276;
+      box-shadow: 0 2px 8px rgba(26, 82, 118, 0.08);
     }
     .software-list .name {
       font-weight: 600;
@@ -99,12 +104,12 @@
     .software-list .desc {
       font-size: 14px;
       color: #555;
-      margin-top: 3px;
+      margin-top: 4px;
     }
     .software-list .cite {
       font-size: 13px;
       color: #666;
-      margin-top: 6px;
+      margin-top: 8px;
       padding-left: 12px;
       border-left: 2px solid #ddd;
     }
@@ -123,6 +128,7 @@
       header { padding: 32px 0 24px; }
       header h1 { font-size: 24px; }
       nav { flex-wrap: wrap; gap: 16px; }
+      .software-list li { padding: 14px; }
     }
   </style>
 </head>
@@ -160,6 +166,11 @@
 
     <ul class="software-list">
       <li>
+        <span class="name"><a href="alltestsim/">AllTestSim</a></span>
+        <span class="year" style="color: #1a5276; font-weight: 500;">Coming Soon</span>
+        <div class="desc">Unified test simulation platform — WinGen + MSTGen + SimulCAT + a lot more, all in one.</div>
+      </li>
+      <li>
         <span class="name"><a href="simulcat/">SimulCAT</a></span>
         <span class="year">2012</span>
         <div class="desc">Windows application that simulates computerized adaptive test administration.</div>
@@ -182,12 +193,6 @@
         <span class="year">2013</span>
         <div class="desc">Simulated data generator for multistage testing.</div>
         <div class="cite">Han, K. T. (2013). MSTGen: Simulated data generator for multistage testing. <em>Applied Psychological Measurement, 37</em>(8), 666–668.</div>
-      </li>
-      <li>
-        <span class="name"><a href="residplots/">ResidPlots-2</a></span>
-        <span class="year">2009</span>
-        <div class="desc">Computer software for IRT graphic residual analyses.</div>
-        <div class="cite">Han, K. T., &amp; Hambleton, R. K. (2009). ResidPlots-2: Computer software for IRT graphic residual analyses (Version 2.0) [Computer software].</div>
       </li>
     </ul>
   </section>

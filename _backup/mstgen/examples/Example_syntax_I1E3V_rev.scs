@@ -1,0 +1,21 @@
+EC> file, Example_simulee1000.wge
+IC> file, Example_ItemPool500.wgix       !Item Characteristics
+IC> normal                               !
+ISC> MFI,1                               !Item Selection Criterion
+IEC> RAND, 5                             !Item Exposure Control
+CB> None                                 !Content Balancing
+SE> Range, -0.5, 0.5                     !Score Estimation
+SE> EAP, 0, 1
+SE> FIN
+SE> Trunc, -3, 3
+SE> Jump, 1, 5
+TL> Var                                  !Test Length
+TL> MIN,10
+TL> MAX,40
+TL> SEE,0.3
+TA> 50, 2                                !Test Administration
+OUT> Example_output_I1E3V.SCA            !Output options
+OUT> SAVE, RES
+OUT> SAVE, USE
+OUT> SAVE, SEE
+OUT> SAVE, Theta

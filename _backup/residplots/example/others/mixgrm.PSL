@@ -1,0 +1,16 @@
+grm.PSL - A TEST WITH some  4-CATEGORY ITEMs
+               graded response model
+>FILE    DFNAME='c:\new folder\parscale\mixgrm.wgr',
+         SAVE ;
+>SAVE   PARM='c:\new folder\parscale\mixgrm.PAR',
+        SCORE='c:\new folder\parscale\mixgrm.SCO';
+>INPUT  NID=4,NTOTAL=45,NTEST=1,SAMPLE=2000;
+(4a1,6x,45A1)
+>TEST1  TNAME=SOCSCI, ITEM=(1(1)45),NBLOCK=45;
+
+>BLOCKS NITEMS=1,REP=40,NCAT=2,ORIGINAL=(0,1),MODIFIED=(1,2),
+        guessing=(2,estimate);
+>BLOCKS NITEMS=1,REP=5,NCAT=4,ORIGINAL=(0,1,2,3),MODIFIED=(1,2,3,4);
+>CALIB  gra,logis,SCALE=1.0,NQPTS=15, CYCLE=(50,1,1,1,1), NEWTON=2,
+        CRIT=0.01, SPRIOR, GPRIOR;
+>SCORE  EAP, SMEAN=0.0, SSD=1.0, NAME=SOCSCI;

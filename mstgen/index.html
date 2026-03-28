@@ -1,203 +1,229 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>IRTEQ - Windows Application that Implements IRT Scaling and Equating</title>
-<style type="text/css">
-<!--
-body {
-	font: 100% Verdana, Arial, Helvetica, sans-serif;
-	background: #666666;
-	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
-	padding: 0;
-	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
-	color: #000000;
-}
-.oneColElsCtr #container {
-	width: 850px;
-	background: #FFFFFF;
-	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
-	border: 1px solid #000000;
-	text-align: left; /* this overrides the text-align: center on the body element. */
-}
-.oneColElsCtr #mainContent {
-	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
-}
-div.MsoTitle3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:0pt;
-	line-height:113%;
-	text-align:left;
-	font-family:"Arial Black";
-	font-size:16.0pt;
-	color:#006699;}
-li.MsoTitle3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:0pt;
-	line-height:113%;
-	text-align:left;
-	font-family:"Arial Black";
-	font-size:16.0pt;
-	color:#006699;}
-p.MsoTitle3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:0pt;
-	line-height:113%;
-	text-align:left;
-	font-family:"Arial Black";
-	font-size:16.0pt;
-	color:#006699;}
-div.MsoBodyText3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:9.0pt;
-	line-height:125%;
-	text-align:left;
-	font-family:Arial;
-	font-size:9.0pt;
-	color:black;}
-li.MsoBodyText3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:9.0pt;
-	line-height:125%;
-	text-align:left;
-	font-family:Arial;
-	font-size:9.0pt;
-	color:black;}
-p.MsoBodyText3 {margin-right:0pt;
-	text-indent:0pt;
-	margin-top:0pt;
-	margin-bottom:9.0pt;
-	line-height:125%;
-	text-align:left;
-	font-family:Arial;
-	font-size:9.0pt;
-	color:black;}
-.style4 {color: #FF0000}
-.style7 {
-	font-size: 8pt
-}
-.style8 {
-	color: #FFFFFF;
-	font-size: 18pt;
-	font-weight: bold;
-}
-.style9 {font-size: 9px}
-.style10 {color: #FFFFFF}
-.style11 {
-	font-size: 12px;
-	font-weight: bold;
-}
-.style13 {
-	font-size: 10pt
-}
--->
-</style></head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MSTGen – Simulated Data Generator for Multistage Testing</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<body class="oneColElsCtr">
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: #2c2c2c;
+      background: #fafafa;
+      line-height: 1.6;
+    }
 
-<div id="container">
-  <div id="mainContent">
-    <table width="103%" border="0">
-      <tr>
-        <td width="20%" rowspan="2"><img src="index_files/MSTGen.jpg" width="266" height="143" alt="MSTGen" /></td>
-        <td width="80%" height="121" bgcolor="#333333"><p align="center" class="MsoTitle3"><span class="style10" style='font-size:14.8999pt;line-height:
-  113%;font-family:&quot;Arial Black&quot;;language:en-US' lang="en-US" xml:lang="en-US">MSTGen:</span></p>
-        <p align="center" class="MsoTitle3 style10"><span class="style10" style='font-size:10.3pt;line-height:113%; font-family:&quot;Arial Black&quot;;language:en-US' lang="en-US" xml:lang="en-US">Windows Application that Simulates CAT Administration</span></p>
-        <p align="center" class="MsoTitle3 style10"><span class="style10" style='font-size:10.3pt;line-height:113%; font-family:&quot;Arial Black&quot;;language:en-US' lang="en-US" xml:lang="en-US">Version 1.2</span></p></td>
-      </tr>
-      <tr>
-        <td width="80%" height="28"><p class="style11"> Kyung (Chris) T. Han</p></td>
-      </tr>
-    </table>
-    <p align="center" class="MsoTitle3">&nbsp;</p>
-    <h1 align="center"><img src="index_files/MSTGen.jpg" width="713" height="429" alt="MSTGen" /></h1>
-    <div align="center"></div>
-    <table width="500" border="1" align="center">
-      <tr>
-        <td>
-          <p><span lang="en-US" xml:lang="en-US">Preferred Citation:</span></p>
-        <p>Han, K. T. (2013). MSTGen: simulated data generator for multistage testing. <i>Applied Psychological Measurement, 37</i>(8), 666-668.</p></td>
-      </tr>
-    </table>
-    <p class="MsoBodyText3">&nbsp;</p>
-    <table width="100%" border="0" align="center">
-      <tr>
-        <td bgcolor="#666666"><div align="center"><span class="style8">about <em>MSTGen</em></span></div></td>
-      </tr>
-    </table>
-    <div align="center"></div>
-    <p class="MsoBodyText3"><span style='font-family:Arial;language:
-  en-US' lang="en-US" xml:lang="en-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-    <p>Multistage testing, or MST, was  developed as an alternative to computerized adaptive testing (CAT) for  applications in which it is preferable to administer a test at the level of  item sets (i.e., modules). As with CAT, the simulation technique in MST plays a  critical role in the development and maintainance of tests. Theoretically, MST  is a special case of CAT (likewise, CAT also can be viewed as a special version  of MST). Technically, however, MST and CAT, are completely different relative  to how test systems work; thus existing commercial or noncommercial CAT  simulation programs, for example, <em>CATSim</em> (Weiss &amp; Guyer, 2012) and <em>SimulCAT</em> (Han, 2012), cannot accommodate MST-based tests. <em>MSTGen</em>, a new MST simulation software tool, was developed to serve  various purposes ranging from fundamental MST research to technical MST program  evaluations. The new CAT simulation software tool supports both traditional MST  functioning (MST by routing to preassembled modules after each stage; Luecht  &amp; Nungester, 1998) and new MST methods (e.g., MST by shaping a module for  each stage; Han &amp; Guo, 2012). It offers a variety of test administration  environments and a user-friendly graphical interface.</p>
-<p><br />
-      <strong><em>MSTGen supports different modes  of MST </em></strong><br />
-Two different modes for MST are  supported in <em>MSTGen</em>. The first mode  is the typical, traditional MST in which examinees are routed to one of several  preassembled test modules based on their previous responses (Luecht &amp;  Nungester, 1998). Users have three different module selection criteria to  choose from (the maximum Fisher information, minimum average difficulty  difference, and random selection) and can employ sets of multiple parallel  modules (i.e., panels) for test exposure control. <em>MSTGen</em> supports up to 990 stages and modules with few limits in the  number of items. The second mode is designed for the new MST approach, proposed  by Han and Guo (2012), which shapes an item module for each stage on the fly,  based on test information function targets. The new MST mode accomplishes item  exposure control and content balancing within the module shaping process. </p>
-<p><br />
-  <strong><em>MSTGen simulates various testing  environment.</em></strong><br />
-  <em>MSTGen</em> supports various test administration options to create test environments  that are as close as possible to live testing situations. First, the interim  and final score estimates can be calculated using the maximum likelihood (ML),  Bayesian maximum a posteriori (MAP), Bayes expected a posteriori (EAP)  estimations, or any combination of those. Software users also can set the  initial score value, range of score estimates, and restriction in estimate  change. Within <em>MSTGen</em>, the number of  test takers who are administered simultaneously at each test time slot and the  frequency of communication between a test server and client computers (i.e., terminals)  can also be conditioned according to the user&rsquo;s choice. </p>
-<p><br />
-  <strong><em>MSTGen has an intuitive  graphical user interface</em></strong><br />
-  As a Windows-based  application, <em>MSTGen</em> provides a  user-friendly graphical interface. Most features of <em>MSTGen</em> can be accessed by just a few simple point-and-click  movements. The main interface of <em>MSTGen</em> largely retains the theme of earlier test simulation software tools that the  author developed&mdash;<em>WinGen</em> (Han, 2007)  and <em>SimulCAT</em> (Han, 2012), both of which  are widely used in the field. The main interface consists of three easy-to-follow  steps: Examinee/Item Data, Module Assembly, and Test Administration. </p>
-<p><strong><em>MSTGen provides powerful  research tools.</em></strong><br />
-  <em>MSTGen</em> can read user-specified existing data and can generate new  data sets as well. Many input and output file formats remain the same as those  used in <em>WinGen</em> and <em>SimulCAT</em> . Score distribution can be  drawn from a normal, uniform, or beta distribution, and item parameters for an  item pool can be generated from normal, uniform, and/or lognormal  distributions. The <em>MSTGen</em> tool also  offers several graphical analysis tools such as distribution density functions,  item response functions, and information functions at both item and pool  levels. <em>MSTGen</em> can generate reports  on item pool usage and test administrations. For more advanced research, <em>MSTGen</em> provides users with options to  input differential item functioning (DIF) or item parameter drift (IPD)  information as well as preexisting item exposure data. The software tool also  supports the use of syntax files and a cue file for massive simulation studies.</p>
-<p><strong>System Requirements, Availability, and Distribution</strong><br />
-  <em>MSTGen</em> runs on a Microsoft Windows-based operating system with .NET  framework 2.0 or higher. Microsoft&rsquo;s Windows Vista and later editions include  the .NET framework, but a machine running an older version of the Windows OS  will first need to have .NET framework installed. The software package, a copy  of the manual in PDF format, and sample files can be found and downloaded at  the following web site: <a href="http://www.hantest.net">http://www.hantest.net</a>. The software package is  free of charge and may be distributed to others without the author&rsquo;s permission  for noncommercial uses only. <em>MSTGen</em> always checks for the latest version and automatically updates itself as long  as it is running on a machine with an active Internet connection. </p>
-<div align="center">
-  <p><img src="index_files/interface.jpg" width="743" height="592" /></p>
-  <p>&nbsp;</p>
+    a { color: #1a5276; text-decoration: none; }
+    a:hover { color: #c0392b; text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 48px 0 32px;
+      border-bottom: 2px solid #1a5276;
+    }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1a2332;
+    }
+    header h1 span.version {
+      font-size: 15px;
+      font-weight: 400;
+      color: #888;
+      margin-left: 8px;
+    }
+    header p.subtitle {
+      margin-top: 6px;
+      font-size: 15px;
+      color: #555;
+    }
+    header .author {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      padding: 14px 0;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a { color: #1a5276; }
+    nav a:hover { color: #c0392b; text-decoration: none; }
+
+    section { padding: 32px 0 24px; }
+    section + section { border-top: 1px solid #eee; }
+    section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a2332;
+      margin-bottom: 12px;
+    }
+    section h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a2332;
+      margin: 20px 0 8px;
+    }
+    section p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 12px;
+    }
+
+    .citation {
+      background: #f7f9fb;
+      border-left: 3px solid #1a5276;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #444;
+    }
+    .citation strong {
+      display: block;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .screenshot {
+      margin: 24px 0;
+      text-align: center;
+    }
+    .screenshot img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+    }
+
+    .download-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 12px 16px;
+      margin: 8px 0;
+      background: #f7f9fb;
+      border: 1px solid #e8edf2;
+      border-radius: 6px;
+      transition: border-color 0.15s;
+    }
+    .download-item:hover { border-color: #1a5276; }
+    .download-item a {
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .download-item .note {
+      font-size: 13px;
+      color: #777;
+    }
+
+
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid #ddd;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 24px; }
+      nav { flex-wrap: wrap; gap: 16px; }
+      .download-item { flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>MSTGen <span class="version">v1.2</span></h1>
+    <p class="subtitle">Simulated Data Generator for Multistage Testing</p>
+    <p class="author">Kyung (Chris) T. Han</p>
+  </header>
+
+  <nav>
+    <a href="../">Home</a>
+    <a href="#about">About</a>
+    <a href="#downloads">Downloads</a>
+  </nav>
+
+  <section>
+    <div class="citation">
+      <strong>Preferred Citation</strong>
+      Han, K. T. (2013). MSTGen: Simulated data generator for multistage testing. <em>Applied Psychological Measurement, 37</em>(8), 666–668.
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About MSTGen</h2>
+    <p>
+      Multistage testing (MST) was developed as an alternative to computerized adaptive testing (CAT) for applications in which it is preferable to administer a test at the level of item sets (i.e., modules). As with CAT, the simulation technique in MST plays a critical role in the development and maintenance of tests. Theoretically, MST is a special case of CAT; technically, however, MST and CAT are completely different in how test systems work. Existing CAT simulation programs cannot accommodate MST-based tests. <em>MSTGen</em> was developed to serve various purposes ranging from fundamental MST research to technical MST program evaluations.
+    </p>
+
+    <h3>Different Modes of MST</h3>
+    <p>
+      Two different modes for MST are supported. The first is the typical, traditional MST in which examinees are routed to one of several preassembled test modules based on their previous responses. Users have three different module selection criteria to choose from (maximum Fisher information, minimum average difficulty difference, and random selection) and can employ sets of multiple parallel modules (i.e., panels) for test exposure control. MSTGen supports up to 990 stages and modules with few limits in the number of items. The second mode is designed for the new MST approach (Han &amp; Guo, 2012), which shapes an item module for each stage on the fly based on test information function targets.
+    </p>
+
+    <h3>Various Testing Environments</h3>
+    <p>
+      MSTGen supports various test administration options to create test environments that are as close as possible to live testing situations. Interim and final score estimates can be calculated using ML, MAP, or EAP estimations, or any combination. Users can also set the initial score value, range of score estimates, and restriction in estimate change. The number of test takers administered simultaneously and the frequency of communication between test server and client computers can also be conditioned.
+    </p>
+
+    <h3>Intuitive Graphical User Interface</h3>
+    <p>
+      As a Windows-based application, MSTGen provides a user-friendly graphical interface. Most features can be accessed by just a few simple point-and-click movements. The main interface consists of three easy-to-follow steps: Examinee/Item Data, Module Assembly, and Test Administration.
+    </p>
+
+    <h3>Powerful Research Tools</h3>
+    <p>
+      MSTGen can read user-specified existing data and can generate new data sets as well. Score distribution can be drawn from normal, uniform, or beta distributions, and item parameters can be generated from normal, uniform, and/or lognormal distributions. The tool also offers several graphical analysis tools such as distribution density functions, item response functions, and information functions at both item and pool levels. For more advanced research, MSTGen provides options to input differential item functioning (DIF) or item parameter drift (IPD) information as well as preexisting item exposure data.
+    </p>
+
+    <div class="screenshot">
+      <img src="index_files/interface.jpg" alt="MSTGen Interface" />
+    </div>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <p>Requires Microsoft Windows Vista or later with .NET Framework 2.0 or higher (included in Windows Vista and later).</p>
+
+    <div class="download-item">
+      <a href="MSTGen_Han.zip">MSTGen Version 1.2</a>
+      <span class="note">June 12, 2024 · 2,131 KB</span>
+    </div>
+    <div class="download-item">
+      <a href="MSTGen_Manual.pdf">User's Manual (PDF)</a>
+    </div>
+    <div class="download-item">
+      <a href="MSTGen_exampleFiles.zip">Example Files (input/output)</a>
+    </div>
+  </section>
+
+
+  <footer>
+    Last updated: March 2026 · Created by Kyung (Chris) T. Han ·
+    <a href="../">hantest.net</a>
+  </footer>
+
 </div>
-    <table width="100%" border="0" align="center">
-      <tr>
-        <td bgcolor="#666666"><div align="center"><span class="style8">Downloads</span></div></td>
-      </tr>
-    </table>
-    <p class="style13"><span style='language:en-US' lang="en-US" xml:lang="en-US">Note: <em>SimulCAT</em> has been developed for </span><span style='font-family:Arial;font-style:italic;language:en-US'
-  lang="en-US" xml:lang="en-US">Microsoft Windows Vista (32bit or 64bit)</span></i> or later version (<i>ex. Windows 7</i>). </span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US">If your system is </span><span
-  style='font-family:Arial;font-style:italic;language:en-US' lang="en-US" xml:lang="en-US">Windows XP</span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US"> Family and you have been never installed </span><span style='font-family:Arial;font-style:italic;language:en-US'
-  lang="en-US" xml:lang="en-US">Microsoft .NET framework 2.0 </span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US">on your system before, </span><span style='font-family:Arial;color:#CC0000;language:en-US'
-  lang="en-US" xml:lang="en-US">it is necessary to install </span><span style='font-family:Arial;color:#CC0000;font-style:italic;
-  language:en-US'
-  lang="en-US" xml:lang="en-US">.NET framework </span><span style='font-family:
-  Arial;color:#CC0000;language:en-US' lang="en-US" xml:lang="en-US">2.0 first (Download <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&amp;displaylang=en">Here</a>)</span><span
-  style='language:en-US' lang="en-US" xml:lang="en-US">. </span></p>
-    <p class="style13"><span style='language:en-US' lang="en-US" xml:lang="en-US">If you are not sure if your system has </span><span style='font-family:Arial;font-style:italic;language:en-US'
-  lang="en-US" xml:lang="en-US">.NET framework</span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US">, just run &#8217;setup.exe&#8217; file in simulCAT.zip. The installation program will automatically check your system and download .</span><span style='font-family:Arial;font-style:italic;language:en-US'
-  lang="en-US" xml:lang="en-US">NET framework</span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US"> from </span><span
-  style='font-family:Arial;font-style:italic;language:en-US' lang="en-US" xml:lang="en-US">Microsoft</span><span style='language:en-US'
-  lang="en-US" xml:lang="en-US"> website if your system does not have it. However, it could take up to an hour depending on computer. </span></p>
-    <p><span lang="en-US" xml:lang="en-US">MSTGen</span><span lang="en-US" xml:lang="en-US">&nbsp;Version 3.5.6 (</span>June 12,<span lang="en-US" xml:lang="en-US"> 2024)&nbsp;</span><span lang="en-US" xml:lang="en-US"><br />
-      </span><a href="MSTGen_Han.zip"><span lang="en-US" xml:lang="en-US">Download (</span><span lang="en-US" xml:lang="en-US">MSTGen</span><span lang="en-US" xml:lang="en-US">_Han.zip)</span></a><span lang="en-US" xml:lang="en-US">&nbsp;<br />
-    </span><span lang="en-US" xml:lang="en-US">Size:</span><span lang="en-US" xml:lang="en-US"><span dir="ltr"> </span></span>2,131KB</p>
-    <p><span lang="en-US" xml:lang="en-US">MSTGen&nbsp;User&rsquo;s Manual<br />
-      <a href="MSTGen_Manual.pdf">Download (MSTGen_Manual.pdf)</a></span></p>
-    <p>MSTGen&nbsp;Examples (input/output files)<br />
-    <a href="MSTGen_exampleFiles.zip">Download (MSTGen_exampleFiles.zip)</a></p>
-<hr />
-    <table width="100%" border="2">
-      <tr>
-        <td width="34%"><p align="center"><a href="http://www.hantest.net/wingen" target="_self" class="style13">WinGen2</a><br />
-        <span class="style9">Windows software that Generates IRT parameters and responses</span></p>        </td>
-        <td width="33%"><p align="center"><a href="http://www.hantest.net/irteq" target="_self" class="style13">IRTEQ</a><br />
-        <span class="style9">Windows Application that Implements IRT Scaling and Equating</span></p>        </td>
-        <td width="33%"><div align="center"><a href="http://www.umass.edu/remp" target="_self" class="style13">REMP</a><br />
-            <span class="style9">Research and Evaluation Methods Program</span><br />
-        </div></td>
-      </tr>
-    </table>
-    <hr />
-    <p class="style7">Last updated:<span class="style4">January. 23, 2021</span>     <br />
-    Created by  Kyung (Chris) T. Han      </p>
-  </div>
-<!-- end #container --></div>
+
 </body>
 </html>

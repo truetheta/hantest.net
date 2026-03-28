@@ -1,0 +1,17 @@
+EC> file, Example_simulee1000.wge
+IC> file, Example_ItemPool500.wgix
+IC> normal
+ISC> ASTRAT, 4, BB
+IEC> SHM, 10, 0.2
+CB> None
+SE> Range, -0.5, 0.5
+SE> MLE
+SE> FIN
+SE> Trunc, -3, 3
+SE> Jump, 1, 5
+TL> FIX, 30
+TA> 50, 2
+OUT> Example_output_I2E4F.SCA
+OUT> SAVE, RES
+OUT> SAVE, USE
+OUT> SAVE, FULL

@@ -1,129 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SimulCAT - Simulation Software for Computerized Adaptive Testing</title>
-<style>
-body {
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  background: #f0f0f0;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-#container {
-  max-width: 800px;
-  background: #fff;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  padding: 30px 40px;
-}
-h1 {
-  font-family: "Arial Black", Arial, sans-serif;
-  color: #006699;
-  font-size: 24pt;
-  margin-bottom: 0;
-}
-h1 small {
-  font-size: 12pt;
-  color: #999;
-  font-weight: normal;
-}
-h2 {
-  color: #fff;
-  background: #333;
-  padding: 8px 16px;
-  font-size: 14pt;
-  margin-top: 30px;
-}
-h3 {
-  color: #006699;
-  font-size: 12pt;
-  margin-bottom: 4px;
-}
-.author {
-  font-size: 11pt;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.citation {
-  border: 1px solid #ccc;
-  padding: 12px 16px;
-  margin: 20px 0;
-  font-size: 10pt;
-}
-.citation strong { display: block; margin-bottom: 4px; }
-.download-box {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 16px 20px;
-  margin: 10px 0;
-}
-.download-box a {
-  font-size: 11pt;
-  color: #006699;
-  text-decoration: none;
-  font-weight: bold;
-}
-.download-box a:hover { text-decoration: underline; }
-.download-box .note { font-size: 9pt; color: #666; margin-top: 4px; }
-ul.features { font-size: 10pt; line-height: 1.8; }
-ul.features li { margin-bottom: 4px; }
-.other-software { font-size: 9pt; text-align: center; margin-top: 20px; }
-.other-software a { color: #006699; margin: 0 12px; }
-.footer { font-size: 8pt; color: #999; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 8px; }
-.footer .date { color: #c00; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SimulCAT – Simulation Software for Computerized Adaptive Testing</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: #2c2c2c;
+      background: #fafafa;
+      line-height: 1.6;
+    }
+
+    a { color: #1a5276; text-decoration: none; }
+    a:hover { color: #c0392b; text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* -- Header -- */
+    header {
+      padding: 48px 0 32px;
+      border-bottom: 2px solid #1a5276;
+    }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1a2332;
+    }
+    header h1 span.version {
+      font-size: 15px;
+      font-weight: 400;
+      color: #888;
+      margin-left: 8px;
+    }
+    header p.subtitle {
+      margin-top: 6px;
+      font-size: 15px;
+      color: #555;
+    }
+    header .author {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* -- Nav -- */
+    nav {
+      display: flex;
+      gap: 24px;
+      padding: 14px 0;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a { color: #1a5276; }
+    nav a:hover { color: #c0392b; text-decoration: none; }
+
+    /* -- Sections -- */
+    section { padding: 32px 0 24px; }
+    section + section { border-top: 1px solid #eee; }
+    section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a2332;
+      margin-bottom: 12px;
+    }
+    section p, section li {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    /* -- Citation box -- */
+    .citation {
+      background: #f7f9fb;
+      border-left: 3px solid #1a5276;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #444;
+    }
+    .citation strong {
+      display: block;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* -- Features -- */
+    .features {
+      list-style: none;
+      margin: 16px 0;
+    }
+    .features li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .features li:last-child { border-bottom: none; }
+    .features li strong { color: #1a2332; }
+    .features li code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+
+    /* -- Downloads -- */
+    .download-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 12px 16px;
+      margin: 8px 0;
+      background: #f7f9fb;
+      border: 1px solid #e8edf2;
+      border-radius: 6px;
+      transition: border-color 0.15s;
+    }
+    .download-item:hover { border-color: #1a5276; }
+    .download-item a {
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .download-item .note {
+      font-size: 13px;
+      color: #777;
+    }
+
+
+    /* -- Footer -- */
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid #ddd;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* -- Responsive -- */
+    @media (max-width: 600px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 24px; }
+      nav { flex-wrap: wrap; gap: 16px; }
+      .download-item { flex-direction: column; gap: 4px; }
+    }
+  </style>
 </head>
 <body>
 
-<div id="container">
+<div class="container">
 
-  <h1>SimulCAT <small>v2.0.0</small></h1>
-  <p style="font-size:11pt; color:#555; margin-top:2px;">Windows Application that Simulates Computerized Adaptive Test Administration</p>
-  <p class="author">Kyung (Chris) T. Han</p>
+  <header>
+    <h1>SimulCAT <span class="version">v2.0.0</span></h1>
+    <p class="subtitle">Windows Application that Simulates Computerized Adaptive Test Administration</p>
+    <p class="author">Kyung (Chris) T. Han</p>
+  </header>
 
-  <div class="citation">
-    <strong>Preferred Citation:</strong>
-    Han, K. T. (2012). SimulCAT: Windows software for simulating computerized adaptive test administration. <em>Applied Psychological Measurement, 36</em>(1), 64-66.
-  </div>
+  <nav>
+    <a href="../">Home</a>
+    <a href="#about">About</a>
+    <a href="#whats-new">What's New</a>
+    <a href="#downloads">Downloads</a>
+  </nav>
 
-  <h2>What's New in Version 2.0</h2>
-  <ul class="features">
-    <li><strong>Single-engine architecture</strong> &mdash; GUI and command-line share the same simulation core (SimulCATcon), ensuring consistent results across both modes</li>
-    <li><strong>Command-line interface (SimulCATcon)</strong> &mdash; Run simulations from the terminal with <code>SimulCATcon.exe syntax.scs</code>; ideal for batch processing and scripting</li>
-    <li><strong>Local Fade-Away (LFA) exposure control</strong> &mdash; New theta-node-based exposure control method for more uniform item usage across the ability scale</li>
-    <li><strong>Item review and edit simulation</strong> &mdash; Supports Item Pocket and Moving Window methods for simulating examinee review-and-edit behavior</li>
-    <li><strong>Auto-generated exposure charts</strong> &mdash; Overall and conditional item exposure rate scatter plots are produced automatically after each simulation</li>
-    <li><strong>Migrated to .NET 10</strong> &mdash; Modern runtime with improved performance; cross-platform console engine (Windows and macOS)</li>
-    <li><strong>Automatic update check</strong> &mdash; SimulCAT notifies you when a new version is available on launch</li>
-  </ul>
+  <section>
+    <div class="citation">
+      <strong>Preferred Citation</strong>
+      Han, K. T. (2012). SimulCAT: Windows software for simulating computerized adaptive test administration. <em>Applied Psychological Measurement, 36</em>(1), 64–66.
+    </div>
+  </section>
 
-  <h2>Downloads</h2>
-  <p style="font-size:10pt;">Requires Microsoft Windows 10 (64-bit) or later. Starting with version 2.0, no installation is needed. Simply download the zip, extract it to any desired location, and run <strong>SimulCAT.exe</strong> for the GUI or <strong>SimulCATcon.exe</strong> for the command-line interface.</p>
+  <section id="whats-new">
+    <h2>What's New in Version 2.0</h2>
+    <ul class="features">
+      <li><strong>Single-engine architecture</strong> — GUI and command-line share the same simulation core (SimulCATcon), ensuring consistent results across both modes</li>
+      <li><strong>Command-line interface (SimulCATcon)</strong> — Run simulations from the terminal with <code>SimulCATcon.exe syntax.scs</code>; ideal for batch processing and scripting</li>
+      <li><strong>Local Fade-Away (LFA) exposure control</strong> — New theta-node-based exposure control method for more uniform item usage across the ability scale</li>
+      <li><strong>Item review and edit simulation</strong> — Supports Item Pocket and Moving Window methods for simulating examinee review-and-edit behavior</li>
+      <li><strong>Auto-generated exposure charts</strong> — Overall and conditional item exposure rate scatter plots are produced automatically after each simulation</li>
+      <li><strong>Migrated to .NET 10</strong> — Modern runtime with improved performance; cross-platform console engine (Windows and macOS)</li>
+      <li><strong>Automatic update check</strong> — SimulCAT notifies you when a new version is available on launch</li>
+    </ul>
+  </section>
 
-  <div class="download-box">
-    <a href="https://github.com/truetheta/hantest.net/releases/download/v1.0/SimulCAT.zip">SimulCAT Version 2.0.0 (March 27, 2026)</a>
-    <div class="note">Download, extract, and run &mdash; no installation required</div>
-  </div>
-  <div class="download-box">
-    <a href="SimulCAT_Manual.pdf">User's Manual (PDF)</a>
-  </div>
-  <div class="download-box">
-    <a href="SimulCAT_exampleFiles.zip">Example Files (input/output)</a>
-  </div>
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <p>Requires Microsoft Windows 10 (64-bit) or later. Starting with version 2.0, no installation is needed — simply download, extract, and run.</p>
 
-  <hr />
-  <div class="other-software">
-    <a href="https://www.hantest.net/wingen">WinGen2</a> |
-    <a href="https://www.hantest.net/irteq">IRTEQ</a>
-  </div>
+    <div class="download-item">
+      <a href="https://github.com/truetheta/hantest.net/releases/download/v1.0/SimulCAT.zip">SimulCAT Version 2.0.0</a>
+      <span class="note">March 27, 2026 · Download, extract, and run — no installation required</span>
+    </div>
+    <div class="download-item">
+      <a href="SimulCAT_Manual.pdf">User's Manual (PDF)</a>
+    </div>
+    <div class="download-item">
+      <a href="SimulCAT_exampleFiles.zip">Example Files (input/output)</a>
+    </div>
+  </section>
 
-  <div class="footer">
-    Last updated: <span class="date">March 27, 2026</span><br />
-    Created by Kyung (Chris) T. Han
-  </div>
+
+  <footer>
+    Last updated: March 2026 · Created by Kyung (Chris) T. Han ·
+    <a href="../">hantest.net</a>
+  </footer>
 
 </div>
 
